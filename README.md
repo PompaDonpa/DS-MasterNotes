@@ -12,7 +12,7 @@
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
 <br />
-------------------------------
+
 # <a name="markdown">Markdown</a>
 
 ## Anchors / Internal reference links
@@ -20,7 +20,7 @@
 In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to link to and refer to it on the same page by `[link text](#abcd)`
 
 <br />
-------------------------------
+
 
 # Bash Scripter
 * bash profile location on OSX : `~./bash_profile`
@@ -35,7 +35,7 @@ git push
 ```
 
 <br />
-------------------------------
+
 
 # Python
 
@@ -95,7 +95,7 @@ def factorial(n):
 # `mathplotlib.pyplot` visualizations
 
 <br />
-------------------------------
+
 
 # Derivations
 * [Derivation of a Perceptron]()
@@ -114,7 +114,7 @@ $$
 $$
 
 <br />
-------------------------------
+
 
 ## Snappy
 
