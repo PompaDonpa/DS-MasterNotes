@@ -52,6 +52,8 @@ git push
 
 # <a id="python" >Python</a>
 
+<br />
+
 ## <a id="comprehensions">Comprehensions</a>
 
 ```python 
@@ -63,7 +65,11 @@ git push
 [ char for char in expression  if char in "()" ]
 ```
 
+<br />
+
 ## <a id="functions">Functions</a>
+
+<br />
 
 -    #### <a id="factorial">***Factorial***</a>
 ```python
@@ -73,6 +79,9 @@ def factorial(n):
         prod *= num
     return prod
 ```
+
+<br />
+
 -    ##### <a id="transpose">***Transpose a Matrix***</a>
 
 ```python
