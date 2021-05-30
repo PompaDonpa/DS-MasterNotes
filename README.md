@@ -16,7 +16,12 @@
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
     -   [Bernoulli](#bernoulli)
-    -   [Binomial PMF](#binomial-pmf)      
+    -   [Binomial PMF](#binomial-pmf)
+        -   [Binomial PMF Dictionary](#binomial-pmf-dict)
+        -   [Poisson PMF](#poisson-pmf)
+        -   [Poisson PMF Dictionary](#poisson-pmf-dict)
+        -   [Geometric PMF](#geometric-pmf)
+    -   [Binomial CDF](#binomial-cdf)      
 
 # <a id="relevant-links">Relevant Links</a>
 
