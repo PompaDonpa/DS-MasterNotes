@@ -158,13 +158,8 @@ $$
 s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline x)^2
 $$
 
-:::warning
-Recall
-:::
+*   **`Recall`**
 
-*   ::info 
-    Recall
-    ::
     * $\mu$ : population mean
     * $\overline x$ : sample mean
     
@@ -176,16 +171,17 @@ def variance(lst, sample=True):
         total += (item - mean_)**2
     return total / (len(lst) - sample)
 ```
+<br />
 
 ### <a id="standar-deviation">Standard Deviation</a>
 
-* **Population Standard Deviation**:
+* **`Population Standard Deviation`**:
 
 $$
 \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2}
 $$
 
-* **Sample Standard Deviation**:
+* **`Sample Standard Deviation`**:
 
 $$
 s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline x)^2}
@@ -197,6 +193,7 @@ $$
 def stdev(lst, sample=True):
     return sqrt(variance(lst, sample))
 ```
+<br />
 
 ### <a id="permutations">Permutations</a>
 
@@ -209,7 +206,7 @@ def permutations(n, k):
     return int(factorial(n) / factorial(n-k))
 ```
 
-Slightly more optimized:
+##### Slightly more optimized:
 
 ```python
 def permutations(n, k):
@@ -218,6 +215,7 @@ def permutations(n, k):
         perm *= i
     return perm
 ```
+<br />
 
 ### <a id="combinations">Combinations</a>
 
@@ -236,6 +234,7 @@ def combinations(n, k):
         perm *= i
     return int(perm / factorial(k))
 ```
+<br />
 
 ### <a id="bernoulli">Bernoulli</a>
 
@@ -248,6 +247,7 @@ def bernoulli(p_success=0.5):
     else:
         return False
 ```
+<br />
 
 ### <a id="binomial-pmf">Binomial PMF</a>
 * 3 parameters
@@ -264,25 +264,11 @@ $$
 def binomial_pmf(n, k, p=0.5):
     return combinations(n, k) * (p**k) * (1-p)**(n-k)
 ```
+<br />
 
-### Binomial CDF (`binomial_cdf(n, k_high, p=0.5)`)
+### <a id="binomial-pmf-dict">Binomial PMF Dictionary</a>
 
-$$
-P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
-$$
-
-
-```python
-def binomial_cdf(n, k_high, p=0.5):
-    cumulative = 0.0
-
-    for k in range(0, k_high+1):
-        cumulative += binomial_pmf(n, k, p)
-
-    return cumulative
-```
-
-### `binomial_pmf_dict()` function
+#### `binomial_pmf_dict()`
 
 This should take 4 parameters:
 * `n`: the number of trials
@@ -306,6 +292,30 @@ d = binomial_pmf_dict(8, 0, 8, p=0.25)
 for k, v in d.items():
     print(f'{k}: {v}')
 ```
+
+<br />
+
+
+### <a id="binomial-cdf">Binomial CDF</a>
+
+####    `binomial_cdf(n, k_high, p=0.5)`
+
+$$
+P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
+$$
+
+
+```python
+def binomial_cdf(n, k_high, p=0.5):
+    cumulative = 0.0
+
+    for k in range(0, k_high+1):
+        cumulative += binomial_pmf(n, k, p)
+
+    return cumulative
+```
+
+
 
 ### `poisson_pmf()` function.
 * $e = 2.71828$
