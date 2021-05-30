@@ -76,19 +76,20 @@ def factorial(n):
     return prod
 ```
 
--    ##### <a id="transpose">***Transpose a Matrix***</a>
+-    #### <a id="transpose">***Transpose a Matrix***</a>
 
 ```python
 matrix = [[2, 1, 5], 
           [9, 2, 8], 
           [1, 7, 5]]
 ```
-
+:::info
 |-|-|-|
 |-|-|-|
 |2|1|5|
 |9|2|8|
 |1|7|5|
+:::
 
 ```python 
 for row in zip(matrix[0], matrix[1], matrix[2]):
