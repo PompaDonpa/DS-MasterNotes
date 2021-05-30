@@ -51,7 +51,6 @@ git push
 
 
 # <a id="python" >Python</a>
-
 <br />
 
 ## <a id="comprehensions">Comprehensions</a>
