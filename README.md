@@ -271,10 +271,10 @@ def binomial_pmf(n, k, p=0.5):
 #### `binomial_pmf_dict()`
 
 This should take 4 parameters:
-* `n`: the number of trials
-* `k_low`: the low value of $k$ in the dictionary
-* `k_high`: the high value of $k$ in the dictionary
-* `p=0.5`: the probability of success of a given bernoulli trial
+* `n` the number of trials
+* `k_low` the low value of $k$ in the dictionary
+* `k_high` the high value of $k$ in the dictionary
+* `p=0.5` the probability of success of a given bernoulli trial
 
 
 
@@ -295,29 +295,9 @@ for k, v in d.items():
 
 <br />
 
+### <a id="poisson-pmf">Poisson PMF</a>
 
-### <a id="binomial-cdf">Binomial CDF</a>
-
-####    `binomial_cdf(n, k_high, p=0.5)`
-
-$$
-P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
-$$
-
-
-```python
-def binomial_cdf(n, k_high, p=0.5):
-    cumulative = 0.0
-
-    for k in range(0, k_high+1):
-        cumulative += binomial_pmf(n, k, p)
-
-    return cumulative
-```
-
-
-
-### `poisson_pmf()` function.
+### `poisson_pmf()`
 * $e = 2.71828$
 * Note, both the constant `e` and the `factorial()` function are available from the `math` module.
 
@@ -334,7 +314,9 @@ from math import e, factorial
 def poisson_pmf(lmbda, k):
     return lmbda**k * e**(-lmbda) / factorial(k)
 ```
+<br />
 
+### <a id="poisson-pmf-dict">Poisson PMF Dictionary</a>
 ### `poisson_pmf_dict()`
 * your parameters will be 
     * `lmbda`
@@ -357,8 +339,11 @@ d = poisson_pmf_dict(10, 0, 30)
 for k, v in d.items():
     print(f'{k}: {round(v, 6)}')
 ```
+<br />
 
-### `geometric_pmf()` function
+### <a id="geometric-pmf">Geometric PMF</a>
+### `geometric_pmf()`
+
 * `p` : probability
 * `k` : number of failures (inclusive or exclusive of the 1st success)
 * `inclusive=True` : whether or not to use inclusive or exclusive pmf
@@ -383,7 +368,26 @@ def geometric_pmf(p, k, inclusive=True):
     # else:
     #     return p * (1-p)**k
 ```
+<br />
 
+### <a id="binomial-cdf">Binomial CDF</a>
+
+####    `binomial_cdf(n, k_high, p=0.5)`
+
+$$
+P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
+$$
+
+
+```python
+def binomial_cdf(n, k_high, p=0.5):
+    cumulative = 0.0
+
+    for k in range(0, k_high+1):
+        cumulative += binomial_pmf(n, k, p)
+
+    return cumulative
+```
 
 
 
