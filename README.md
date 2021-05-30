@@ -83,15 +83,12 @@ matrix = [[2, 1, 5],
           [9, 2, 8], 
           [1, 7, 5]]
 ```
-```info
-
 |-|-|-|
 |-|-|-|
 |2|1|5|
 |9|2|8|
 |1|7|5|
 
-```
 
 ```python 
 for row in zip(matrix[0], matrix[1], matrix[2]):
@@ -145,22 +142,23 @@ def median(lst):
     else:
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
 ```
+<br />
 
 ### <a id="variance">Variance</a>
 
-* **Population Variance**:
+* **`Population Variance`**:
 
 
 $$\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2$$
 
 
-* **Sample Variance**:
+* **`Sample Variance`**:
 
 $$
 s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline x)^2
 $$
 
-* Recall:
+* :::info Recall :::
     * $\mu$ : population mean
     * $\overline x$ : sample mean
     
