@@ -130,3 +130,93 @@ def on_the_bubble(lst):
   return swaps, result
         
 ```
+
+## Caesar Chiper
+
+A Caesar Cipher is a classic encryption technique used to encrypt strings. It works by shifting some each letter some amount in the alphabet. For instance, if the shift amount is 2 and the letter is "a" the result will be "c". It also rotates around so if the shift is 2 and the letter is "y" the result will be "a". Learn more about Caesar Ciphers [here](https://en.wikipedia.org/wiki/Caesar_cipher)  . Complete the **`caesar_cipher`** function below. This function takes in two parameters `msg` and **`shift`**, which are the string to be encoded and the size of the shift respectively. This function should return the encrypted string. Note that there wont be any spaces or numbers in the string.
+
+#### ***Solution***
+
+```python 
+def caesar_cipher(msg, shift):
+  alpha = list("abcdefghijklmnopqrstuvwxyz")
+  msg_lower = list(msg.lower())
+  cypher = []
+
+  for char in msg_lower:
+    for idx in range(len(alpha)):
+      if char == alpha[idx]:
+        if (idx + shift) >= (len(alpha)):
+          new_idx = idx + shift - len(alpha)
+        else:
+          new_idx = idx + shift
+        cypher.append(alpha[new_idx])
+  return "".join(cypher)
+
+```
+```python 
+def caesar_cipher(msg, shift):
+    alpha = "abcdefghijklmnopqrstuvwxyz" # getting alphabet
+    new_msg = "" # new string
+    for ltr in msg:
+        idx = alpha.index(ltr) + shift # getting the index in alphabet
+        if idx > 25:
+            idx -= 26 # shifting index
+        new_msg += alpha[idx] # adding shifted character
+    return new_msg
+```
+
+## Valid Parentheses
+
+Write a function called **`valid_parentheses`** which checks to make sure every **`"("`** has a matching **`")"`**. This function should take in a string, and return a boolean. If every **`"("`** has a matching **`")"`** this function should return **`True`**, if it does not, the function should return **`False`**.
+
+**Example**
+
+```python 
+print( valid_parentheses("hi(hi)()") ) # True
+print( valid_parentheses("hi())(")   ) # False
+print( valid_parentheses(")(test")   ) # False
+print( valid_parentheses("()")       ) # True
+print( valid_parentheses(")(((()))") ) # False
+```
+
+#### ***Solution***
+
+```python
+def valid_parentheses(string):
+    match = 0
+    for itm in string:
+        if match < 0:
+            return False
+        if itm == "(":
+            match += 1
+        elif itm == ")":
+            match -= 1
+    return match == 0
+```
+
+## Gnome Sort
+
+Gnome sort is a technique that expands upon the ideas of bubble sort (see last weeks weekly challenge for bubble sort). Instead of iterating through the whole list and swapping items as they come. Gnome sort finds an item that is out of place and iterates back through the list and places it where it needs to be and then continues going forward through the list. Read more about Gnome sort [here](https://en.wikipedia.org/wiki/Gnome_sort) .
+
+Write a **`gnome_sort`** function that takes in a list and returns a tuple, where the first item is the number times it looped and the second item is the sorted list.
+
+#### ***Solution***
+
+```python 
+def gnome_sort(lst):
+  pos = 0
+  count = 0
+  result = lst.copy()
+
+  while pos < len(lst):
+    a, b = result[pos], result[pos -1]
+    if pos == 0 or a >= b:
+      pos += 1
+    else:
+      result[pos], result[pos - 1] = b, a
+      pos -= 1
+    count += 1
+  
+  return count, result
+```
