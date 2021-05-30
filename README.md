@@ -1,8 +1,10 @@
 # Data Science - MasterNotes
 
+*   [Relevant Links](#relevant-links)
 *   [Markdown](#markdown)
+*   [Bash Scripter](#bash-scripter)
 
-# Relevant Links
+# <a id="relevant-links">Relevant Links</a>
 
 * [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
 
@@ -10,7 +12,7 @@
 
 <br />
 
-# <a name="markdown">Markdown</a>
+# <a id="markdown">Markdown</a>
 
 ## Anchors / Internal reference links
 
@@ -19,7 +21,7 @@ In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to li
 <br />
 
 
-# [Bash Scripter](#bash-script)
+# <a id="bash-scripter">Bash Scripter</a>
 * bash profile location on OSX : `~./bash_profile`
 
 ```bash
