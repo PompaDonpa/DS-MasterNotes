@@ -1,4 +1,4 @@
-### Queue Time
+## Queue Time
 
 There are a class of problems in computer programming that deal with items coming out of a queue. A great example is the self checkout line at a grocery store, where one line of shoppers wait to check out at multiple registers (for this example imagine that everyone can only checkout one item per second). Write a program thats called **`queue_time`** that will calculate the time it takes for the given **`queue`** to get processed by some number of **`processors`**. This function will have two parameters. The first one, called **`queue`**, will contain integers that representing a task with its value being how long it will take to complete. The second one, called processors, will represent the number of processors to work on the queue.
 
@@ -22,7 +22,7 @@ def queue_time(queue, processors):
 
 ```
 
-### Binary Search
+## Binary Search
 
 When lists get incredibly long it becomes incredibly slow to search through the list. Because of this computer scientists have spent years developing techniques to make finding items in a long list quicker. Binary search is a technique used to find a specific item in a list. Learn more about binary search [here](https://en.wikipedia.org/wiki/Binary_search_algorithm)  . Essentially, binary search boils down to this:
 
@@ -71,3 +71,62 @@ def bin_search(lst, el):
 
 Note, the raise **`ValueError()`** is safety measure included in this function just in case you attempt to find an element that is not present; it is not necessary to include in your solution to this challenge as the test cases used by Learn always include the item to find in the input list.
 
+
+## Sort by Row or Column
+
+Write a function called sort_by_direction that takes two parameters. The first parameter called seq will be a list of lists where the number of lists is equal to the number of items in each list. The second parameter called direc will give the direction to sort each list of lists. direc will have four possible values, "L" which will sort each row in ascending order, "R" which will sort each row in descending order, "U" which sorts each column in ascending order, and "D" which sorts each column in descending order.
+
+Note that a list of lists can be represented as rows and columns like so:
+
+```python 
+[[2, 1, 5],
+ [9, 2, 8],
+ [1, 7, 3]]
+```
+#### ***Solution*** 
+-    ##### [video](https://www.youtube.com/watch?v=-WWOFR74PuM)
+
+```python
+def sort_by_direction(arr, direc):
+    if direc == "L" or direc == "R":
+        rtn = [sorted(itm, reverse = ("R" == direc)) for itm in arr]
+    else:
+        lst2sort = []
+        for i in range(len(arr)):
+            temp = []
+            for j in range(len(arr)):
+                temp.append(arr[j][i])
+            lst2sort.append(temp)
+
+        update = [sorted(itm, reverse = "U" == direc) for itm in lst2sort]
+        rtn = []
+
+        for i in range(len(arr)):
+            temp = []
+            for j in range(len(arr)):
+                temp.append(update[j][i])
+            rtn.append(temp)
+    return rtn
+```
+
+## [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
+
+Bubble sort  is a classic algorithm taught in computer science (and a common interview question). Write a function called **`on_the_bubble`** that takes a **`list`** of numbers as an argument. This function should return a **`tuple`** where the first item represents the number of swaps that were performed in order to sort the **`list`**, and where the second element represents the sorted **`list`** itself.
+
+#### ***Solution***
+-    [video](https://www.youtube.com/watch?v=Xj_DXB4-jLU)
+```python 
+def on_the_bubble(lst):
+  swaps = 0
+  result = lst.copy()
+
+  for _ in range(len(lst)):
+    for idx in range(len(lst) - 1 ):
+      a, b = result[idx], result[idx + 1]
+      if a > b:
+        result[idx], result[idx + 1] = b, a
+        swaps += 1
+
+  return swaps, result
+        
+```
