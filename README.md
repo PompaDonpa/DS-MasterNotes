@@ -51,7 +51,6 @@ git push
 
 
 # <a id="python" >Python</a>
-<br />
 
 ## <a id="comprehensions">Comprehensions</a>
 
@@ -68,8 +67,6 @@ git push
 
 ## <a id="functions">Functions</a>
 
-<br />
-
 -    #### <a id="factorial">***Factorial***</a>
 ```python
 def factorial(n):
@@ -78,8 +75,6 @@ def factorial(n):
         prod *= num
     return prod
 ```
-
-<br />
 
 -    ##### <a id="transpose">***Transpose a Matrix***</a>
 
