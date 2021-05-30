@@ -3,6 +3,20 @@
 *   [Relevant Links](#relevant-links)
 *   [Markdown](#markdown)
 *   [Bash Scripter](#bash-scripter)
+*   [Python](#python)
+    -   [Comprehensions](#comprehensions)
+    -   [Functions](#functions)
+        -   [Factorial](#factorial)
+        -   [Transpose a Matrix](#transpose)
+*   [Statistics](#statistics)
+    -   [Mean](#mean)
+    -   [Median](#median)
+    -   [Variance](#variance)
+    -   [Standard Deviation](#standard-deviation)
+    -   [Permutations](#permutations)
+    -   [Combinations](#combinations)
+    -   [Bernoulli](#bernoulli)
+    -   [Binomial PMF](#binomial-pmf)      
 
 # <a id="relevant-links">Relevant Links</a>
 
@@ -36,9 +50,9 @@ git push
 <br />
 
 
-# Python
+# <a id="python" >Python</a>
 
-## Comprehensions
+## <a id="comprehensions">Comprehensions</a>
 
 ```python 
 # Comprehension 
@@ -49,9 +63,9 @@ git push
 [ char for char in expression  if char in "()" ]
 ```
 
-## Functions
+## <a id="functions">Functions</a>
 
--    #### ***Factorial***
+-    #### <a id="factorial">***Factorial***</a>
 ```python
 def factorial(n):
     prod = 1
@@ -59,7 +73,7 @@ def factorial(n):
         prod *= num
     return prod
 ```
--    ##### ***Transpose a Matrix***
+-    ##### <a id="transpose">***Transpose a Matrix***</a>
 
 ```python
 matrix = [[2, 1, 5], 
@@ -101,11 +115,9 @@ list(zip(*matrix))
 
 <br />
 
-## Statistics
+# <a id="statistics">Statistics</a>
 
-# Statistics
-
-### Mean
+### <a id="mean">Mean</a>
 
 ```python
 def mean(lst, trim=0):
@@ -115,7 +127,7 @@ def mean(lst, trim=0):
     return sum(lst_) / len(lst_)
 ```
 
-### Median
+### <a id="median">Median</a>
 
 ```python
 def median(lst):
@@ -128,7 +140,7 @@ def median(lst):
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
 ```
 
-### Variance 
+### <a id="variance">Variance</a>
 
 * **Population Variance**:
 
@@ -155,7 +167,7 @@ def variance(lst, sample=True):
     return total / (len(lst) - sample)
 ```
 
-### Standard Deviation
+### <a id="standar-deviation">Standard Deviation</a>
 
 * **Population Standard Deviation**:
 
@@ -176,17 +188,7 @@ def stdev(lst, sample=True):
     return sqrt(variance(lst, sample))
 ```
 
-### Factorial
-
-```python
-def factorial(n):
-    prod = 1
-    for num in range(2, n+1):
-        prod *= num
-    return prod
-```
-
-### Permutations
+### <a id="permutations">Permutations</a>
 
 $$
 nPk = \frac{n!}{(n-k)!}
@@ -207,7 +209,7 @@ def permutations(n, k):
     return perm
 ```
 
-### Combinations
+### <a id="combinations">Combinations</a>
 
 $$
 nCk = \frac{n!}{((n-k)! k!)}
@@ -225,7 +227,7 @@ def combinations(n, k):
     return int(perm / factorial(k))
 ```
 
-### Bernoulli
+### <a id="bernoulli">Bernoulli</a>
 
 ```python
 def bernoulli(p_success=0.5):
@@ -237,12 +239,12 @@ def bernoulli(p_success=0.5):
         return False
 ```
 
-### Binomial PMF (`binomial_pmf(n,p,k)`)
+### <a id="binomial-pmf">Binomial PMF</a>
 * 3 parameters
-$n$ = number of bernoulli trials
-$p$ = probability of success on any given bernoulli trial
-$k$ = specific number of successes for which to find the probability
-
+-   $n$ = number of bernoulli trials
+-   $p$ = probability of success on any given bernoulli trial
+-   $k$ = specific number of successes for which to find the probability
+####    `binomial_pmf(n,p,k)`
 $$
 P(X=k) = {n \choose k} p^k(1-p)^{n-k}
 $$
