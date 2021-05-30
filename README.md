@@ -22,7 +22,12 @@
         -   [Poisson PMF Dictionary](#poisson-pmf-dict)
         -   [Geometric PMF](#geometric-pmf)
     -   [Binomial CDF](#binomial-cdf)      
-
+*   [Machine Learning Workflow](#machine-learning)
+    -   [Cross validation](#cross-validation)
+    -   [K - Fold Cross Validation](#k-cross)
+*   [Bootstrap](#bootstrap)
+*   [Sorting Algorithms](#sorting-algo)
+    -   [Bubble Sort](#bubble-sort)   
 # <a id="relevant-links">Relevant Links</a>
 
 * [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
