@@ -27,7 +27,13 @@
     -   [K - Fold Cross Validation](#k-cross)
 *   [Bootstrap](#bootstrap)
 *   [Sorting Algorithms](#sorting-algo)
-    -   [Bubble Sort](#bubble-sort)   
+    -   [Bubble Sort](#bubble-sort)
+*   [Derivations](#derivations)
+*   [MathJax](#mathjax)
+*         
+ 
+
+  
 # <a id="relevant-links">Relevant Links</a>
 
 * [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
@@ -404,28 +410,28 @@ def binomial_cdf(n, k_high, p=0.5):
 
 <br />
 
-# Machine Learning Workflow
+# <a id="machine-learning">Machine Learning Workflow</a>
 
 <br />
 
-### Cross Validation
+### <a id="cross-validation">Cross Validation</a>
 
 ```python
 # train/test split
 ```
 
-### k-fold Cross Validation
+### <a id="k-cross">k-fold Cross Validation</a>
 
-### Bootstrap
-
-<br />
-<br />
-
-# Sorting Algorithms 
+### <a id="bootstrap">Bootstrap</a>
 
 <br />
+<br />
 
-## Bubble Sort
+# <a id="sorting-algo">Sorting Algorithms</a> 
+
+<br />
+
+## <a id="bubble-sort">Bubble Sort</a>
 
 ```python
 # hand coded algorithm
@@ -434,34 +440,21 @@ def binomial_cdf(n, k_high, p=0.5):
 ```python
 # library-called bubble sort
 ```
-<br />
-<br />
-
-
-# `mathplotlib.pyplot` visualizations
 
 <br />
 
 
-# Derivations
+# <a id="derivations">Derivations</a>
 * [Derivation of a Perceptron]()
 
 
 <br />
 <br />
 
-# MathJax
+# <a id="mathjax">MathJax</a>
 * [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) for GitHub 
 
 $$
 \sum_{x=1}^{25} a_x
 $$
 
-<br />
-
-
-## Snappy
-
-* A handy screenshot capturer
-
-## Xnipapp
