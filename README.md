@@ -103,7 +103,8 @@ matrix = [[2, 1, 5],
           [9, 2, 8], 
           [1, 7, 5]]
 ```
-<div align="center">
+<div>
+<br />
     
 |-|-|-|
 |-|-|-|
@@ -183,7 +184,7 @@ def five_number_summary(lst):
 ```
 <br />
 
-### <a id="iqr">IQR = Q3 - Q1</a>
+### <a id="iqr">IQR</a>
 
 ```python
 def iqr(lst):
@@ -191,6 +192,8 @@ def iqr(lst):
     
     return q3 - q1
 ```
+<br />
+
 
 ### <a id="outliers">Detect Outliers</a>
 ```python
@@ -209,7 +212,6 @@ a = [-500,12,32,54,45,87,89,61,31,12549]
 
 print(detect_outliers(a,1.5)) # [-500, 12549]
 ```
-
 <br />
 
 ### <a id="remove-outliers">Remove Outliers</a>
@@ -227,6 +229,8 @@ def remove_outliers(lst, outlier_coef=1.5):
 a =  [590, 615, 575, 608, 350, 1285, 408, 540, 555, 679]
 print(remove_outliers(a)) # [590, 615, 575, 608, 540, 555, 679]
 ```
+<br />
+
 
 ### <a id="variance">Variance</a>
 
