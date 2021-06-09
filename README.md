@@ -15,6 +15,7 @@
     -   [Five-Number Summary](#five-number)
     -   [IQR](#iqr)
     -   [Outliers](#outliers)
+    -   [Remove Outliers](#remove-outliers)
     -   [Standard Deviation](#standard-deviation)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
@@ -164,6 +165,7 @@ def median(lst):
 <br />
 
 ### <a id="five-number">Five-Number Summary</a>
+Five-Number Summary = min(lst), Q1 , median(lst), Q3, max(lst)
 
 ```python
 def five_number_summary(lst):
@@ -204,6 +206,20 @@ print(detect_outliers(a,1.5)) # [-500, 12549]
 ```
 
 <br />
+
+### <a id="remove-outliers">Remove Outliers</a>
+```python
+def remove_outliers(lst, outlier_coef=1.5):
+    outliers = detect_outliers(lst, outlier_coef)
+    output = lst.copy()
+    for num in outliers:
+        if num in output:
+            output.remove(num)
+    return output
+
+a =  [590, 615, 575, 608, 350, 1285, 408, 540, 555, 679]
+print(remove_outliers(a)) # [590, 615, 575, 608, 540, 555, 679]
+```
 
 ### <a id="variance">Variance</a>
 
