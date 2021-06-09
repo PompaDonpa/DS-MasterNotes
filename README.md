@@ -103,12 +103,13 @@ matrix = [[2, 1, 5],
           [9, 2, 8], 
           [1, 7, 5]]
 ```
+<div align="center">
 |-|-|-|
 |-|-|-|
 |2|1|5|
 |9|2|8|
 |1|7|5|
-
+</div>
 
 ```python 
 for row in zip(matrix[0], matrix[1], matrix[2]):
@@ -172,8 +173,10 @@ def five_number_summary(lst):
     sorted_list = sorted(lst)
     lower_half = sorted_list[0: int(len(lst) / 2) + (len(lst) % 2)]
     upper_half = sorted_list[int(len(lst) / 2): ]
+    
     q1 = median(lower_half)
     q3 = median(upper_half)
+    
     return min(lst), q1, median(lst), q3, max(lst)
 ```
 <br />
@@ -183,6 +186,7 @@ def five_number_summary(lst):
 ```python
 def iqr(lst):
     _, q1, _, q3, _ = five_number_summary(lst)
+    
     return q3 - q1
 ```
 
@@ -191,7 +195,6 @@ def iqr(lst):
 def detect_outliers(lst, outlier_coef=1.5):
     outliers = []
     _,q1,_,q3, _ = five_number_summary(lst)
-    
     iqr_ =iqr(lst)
     
     for num in lst:
@@ -212,9 +215,11 @@ print(detect_outliers(a,1.5)) # [-500, 12549]
 def remove_outliers(lst, outlier_coef=1.5):
     outliers = detect_outliers(lst, outlier_coef)
     output = lst.copy()
+    
     for num in outliers:
         if num in output:
             output.remove(num)
+            
     return output
 
 a =  [590, 615, 575, 608, 350, 1285, 408, 540, 555, 679]
