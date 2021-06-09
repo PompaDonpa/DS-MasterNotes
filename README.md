@@ -13,6 +13,8 @@
     -   [Median](#median)
     -   [Variance](#variance)
     -   [Five-Number Summary](#five-number)
+    -   [IQR](#iqr)
+    -   [Outliers](#outliers)
     -   [Standard Deviation](#standard-deviation)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
@@ -172,7 +174,36 @@ def five_number_summary(lst):
     q3 = median(upper_half)
     return min(lst), q1, median(lst), q3, max(lst)
 ```
+<br />
 
+### <a id="iqr">IQR = Q3 - Q1</a>
+
+```python
+def iqr(lst):
+    _, q1, _, q3, _ = five_number_summary(lst)
+    return q3 - q1
+```
+
+### <a id="outliers">Detect Outliers</a>
+```python
+def detect_outliers(lst, outlier_coef=1.5):
+    outliers = []
+    _,q1,_,q3, _ = five_number_summary(lst)
+    
+    iqr_ =iqr(lst)
+    
+    for num in lst:
+        if num < q1 -iqr_*outlier_coef or num > q3 + outlier_coef*iqr_:
+            outliers.append(num)
+
+    return outliers
+    
+a = [-500,12,32,54,45,87,89,61,31,12549] 
+
+print(detect_outliers(a,1.5)) # [-500, 12549]
+```
+
+<br />
 
 ### <a id="variance">Variance</a>
 
