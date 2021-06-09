@@ -12,6 +12,7 @@
     -   [Mean](#mean)
     -   [Median](#median)
     -   [Variance](#variance)
+    -   [Five-Number Summary](#five-number)
     -   [Standard Deviation](#standard-deviation)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
@@ -159,6 +160,19 @@ def median(lst):
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
 ```
 <br />
+
+### <a id="five-number">Five-Number Summary</a>
+
+```python
+def five_number_summary(lst):
+    sorted_list = sorted(lst)
+    lower_half = sorted_list[0: int(len(lst) / 2) + (len(lst) % 2)]
+    upper_half = sorted_list[int(len(lst) / 2): ]
+    q1 = median(lower_half)
+    q3 = median(upper_half)
+    return min(lst), q1, median(lst), q3, max(lst)
+```
+
 
 ### <a id="variance">Variance</a>
 
