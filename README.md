@@ -104,11 +104,13 @@ matrix = [[2, 1, 5],
           [1, 7, 5]]
 ```
 <div align="center">
+    
 |-|-|-|
 |-|-|-|
 |2|1|5|
 |9|2|8|
 |1|7|5|
+    
 </div>
 
 ```python 
@@ -166,7 +168,7 @@ def median(lst):
 <br />
 
 ### <a id="five-number">Five-Number Summary</a>
-Five-Number Summary = min(lst), Q1 , median(lst), Q3, max(lst)
+
 
 ```python
 def five_number_summary(lst):
