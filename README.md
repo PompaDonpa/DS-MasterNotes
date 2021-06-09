@@ -275,6 +275,8 @@ $$
 
 
 ```python
+from math import sqrt
+
 def stdev(lst, sample=True):
     return sqrt(variance(lst, sample))
 ```
