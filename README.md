@@ -25,7 +25,9 @@
         -   [Poisson PMF](#poisson-pmf)
         -   [Poisson PMF Dictionary](#poisson-pmf-dict)
         -   [Geometric PMF](#geometric-pmf)
-    -   [Binomial CDF](#binomial-cdf)      
+    -   [Binomial CDF](#binomial-cdf)
+*   [Probability](#probability)
+    -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
     -   [K - Fold Cross Validation](#k-cross)
@@ -476,7 +478,9 @@ def binomial_cdf(n, k_high, p=0.5):
     return cumulative
 ```
 
+# <a id="probability">Probability</a>
 
+### <a id="axioms-of-prob">Axioms of Probability</a>
 
 
 <br />
