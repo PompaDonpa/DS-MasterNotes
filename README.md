@@ -27,6 +27,7 @@
         -   [Geometric PMF](#geometric-pmf)
     -   [Binomial CDF](#binomial-cdf)
 *   [Probability](#probability)
+    -   [Definition of Set](#def-of-set) 
     -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
@@ -479,6 +480,22 @@ def binomial_cdf(n, k_high, p=0.5):
 ```
 
 # <a id="probability">Probability</a>
+
+### <a id="def-of-set">Definition of Set</a>
+* In mathematics, a set is a well-defined collection of objects
+* A set is also an object in itself
+* Sets must be comprised of unique objects: **NO DUPLICATES**
+* If the outcome of a random experiment is unknown, and all of the possible outcomes are predictable in nature, this set of outcomes is known as the **Sample Space**, notated with a capital $S$, or as the “Universal Set”,  denoted $U$, or $\Omega$ (capital omega)
+```python
+def dedupe_in_order(lst):
+    deduped = []
+
+    for element in lst:
+        if element not in deduped:
+            deduped.append(element)
+
+    return deduped
+```
 
 ### <a id="axioms-of-prob">Axioms of Probability</a>
 
