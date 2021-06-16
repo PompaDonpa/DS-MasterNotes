@@ -522,6 +522,16 @@ The union can be extrapolated to more than two events
 
     -   NOTE: The order of the union operation does not matter
 
+```python
+def union_mult_sets(*mult_sets):
+    set_union = []
+    for lst in mult_sets:
+        for item in lst:
+            if item not in set_union:
+                set_union.append(item)
+    return set_union
+```
+
 <br />
 
 ### <a id="axioms-of-prob">Axioms of Probability</a>
