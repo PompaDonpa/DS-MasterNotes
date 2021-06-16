@@ -30,7 +30,9 @@
     -   [Definition of Set](#def-of-set)
     -   [Set Union](#set-union)
     -   [Set Union for more than 2 events](#set-union2)
-    -   [Set Intersection](#set-inter)  
+    -   [Set Intersection](#set-inter)
+    -   [Set Difference](#set-diff)
+    -   [Set Complement](#set-complement)
     -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
@@ -548,9 +550,56 @@ def intersection(a,b):
     return intersected
 ```
 
+```python
+def intersection_mult(*mult_sets):
+    set_intersect = []
+    if len(mult_sets) > 1 and len(mult_sets[0]) > 0:
+        for item in mult_sets[0]:
+            is_member = True
+            for set_ in mult_sets[1:]:
+                if item not in set_:
+                    is_member = False
+                    break
+            if is_member:
+                set_intersect.append(item)
+    return set_intersect
+```
+
+### <a id="set-diff">Set Difference</a>
+* Set Difference is anything in one set that isn’t the other.
+    *   Syntax:
+        A\B, A-B, A.difference(B)
+
+    *   Example:
+        A = {1, 2, 3, 4, 5}
+        B = {5, 6, 7, 8, 9}
+        A - B = {1, 2, 3, 4}
+        B - A = {6, 7, 8, 9}
+        
+```python
+def difference(set1, set2):
+    set_difference = []
+    for item in set1:
+        if item not in set2:
+            set_difference.append(item)
+    return set_difference
+```
+
+### <a id="set-complement">Complement</a>
+*   The complement of a set is the set which represents all members of the sample space which are not in the event.
+*   Common Notation for the complement of events A and B: 
+*   A’ or Ac or A0 or Ā or ¬A or ~A
+*   There is a distinct relationship between the complement and the logical operator NOT
+
+```python
+def complement(sample_space, set1):
+    return difference(sample_space, set1)
+```
+
+
 <br />
 
-### <a id="axioms-of-prob">Axioms of Probability</a>
+## <a id="axioms-of-prob">Axioms of Probability</a>
 
 
 <br />
