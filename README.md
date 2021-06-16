@@ -27,7 +27,8 @@
         -   [Geometric PMF](#geometric-pmf)
     -   [Binomial CDF](#binomial-cdf)
 *   [Probability](#probability)
-    -   [Definition of Set](#def-of-set) 
+    -   [Definition of Set](#def-of-set)
+    -   [Set Union](#set-union)  
     -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
@@ -495,6 +496,21 @@ def dedupe_in_order(lst):
             deduped.append(element)
 
     return deduped
+```
+### <a id="set-union">Set Union</a>
+* The union of two sets is a new set that contains all of the elements that are in at least one of the two sets.
+* Common Notation for the union of events A and B: 
+* A ∪ B
+
+* There is a distinct relationship between the set theory definition of union, and the logical operator OR.
+
+```python
+def union(set1, set2):
+    set_union = set1.copy()
+    for item in set2:
+        if item not in set_union:
+            set_union.append(item)
+    return set_union
 ```
 
 ### <a id="axioms-of-prob">Axioms of Probability</a>
