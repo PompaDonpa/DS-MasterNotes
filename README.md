@@ -29,7 +29,8 @@
 *   [Probability](#probability)
     -   [Definition of Set](#def-of-set)
     -   [Set Union](#set-union)
-    -   [Set Union for more than 2 events](#set-union2)  
+    -   [Set Union for more than 2 events](#set-union2)
+    -   [Set Intersection](#set-inter)  
     -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
@@ -530,6 +531,21 @@ def union_mult_sets(*mult_sets):
             if item not in set_union:
                 set_union.append(item)
     return set_union
+```
+
+### <a id="set-inter">Set Intersection</a>
+* The intersection of two sets is a new set that contains all of the elements that are members of both sets which comprise the intersection
+* Common Notation for the intersection of events A and B: 
+* AB or A ∩ B
+* There is a distinct relationship between the set theory definition of intersection, and the logical operator AND.
+
+```python
+def intersection(a,b):
+    intersected = []
+    for item in a:
+        if item in b:
+            intersected.append(item)
+    return intersected
 ```
 
 <br />
