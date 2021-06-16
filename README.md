@@ -28,7 +28,8 @@
     -   [Binomial CDF](#binomial-cdf)
 *   [Probability](#probability)
     -   [Definition of Set](#def-of-set)
-    -   [Set Union](#set-union)  
+    -   [Set Union](#set-union)
+    -   [Set Union for more than 2 events](#set-union2)  
     -   [Axioms of Probability](#axioms-of-prob)      
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
@@ -512,6 +513,16 @@ def union(set1, set2):
             set_union.append(item)
     return set_union
 ```
+### <a id="set-union2">Set Union for more than 2 events</a>
+The union can be extrapolated to more than two events
+
+* Common Notation multiple events: 
+* A ∪ B ∪ C
+* A ∪ B ∪ C ∪ D
+
+    -   NOTE: The order of the union operation does not matter
+
+<br />
 
 ### <a id="axioms-of-prob">Axioms of Probability</a>
 
