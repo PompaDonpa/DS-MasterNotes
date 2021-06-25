@@ -470,10 +470,17 @@ def geometric_pmf(p, k, inclusive=True):
 ### `poisson_cdf()`
 * your parameters will be 
     * `lmbda`
-    * `low_k`
     * `high_k`
 
+```python
+def poisson_cdf(lmbda, k_high):
+    cdf = 0.0
 
+    for k in range(k_high+1):
+        cdf += poisson_pmf(lmbda, k)
+
+    return cdf
+```
 
 
 <br />
