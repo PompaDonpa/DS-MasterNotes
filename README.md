@@ -90,7 +90,7 @@ $ \pmb A = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]$
     
 ***Step 1 :*** Sum all of the values in the dataset.
     
-$ \pmb sum(A) = a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + a_9 + a_1_0 $
+$ \pmb sum(A) = a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + a_9 + a_{10} $
 
     
 </details>
