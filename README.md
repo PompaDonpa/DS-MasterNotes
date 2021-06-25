@@ -121,8 +121,17 @@ In the table above, it is shown that the notation for the mean is different depe
     
 The study of statistics consists of the analysis and study of datasets, and there are two types of datasets, populations and samples. 
     
-    -   A **population** represents all of the possible data points or observations from a set of data, for example, a rancher who owns 1000 cattle could take the population mean of their weights by measuring the weight of all 1000 cattle, and taking their mean.  
+    -   A <b>population</b> represents all of the possible data points or observations from a set of data, for example, a rancher who owns 1000 cattle could take the population mean of their weights by measuring the weight of all 1000 cattle, and taking their mean.  
 
-    -   Conversely, a **sample** does not represent every possible observation, for example, the rancher above could make an estimate of the population mean by taking a random sampling of 100 of the cattle, taking weight measurements, and then taking the mean of those 100 observations.
+    -   Conversely, a <b>sample</b> does not represent every possible observation, for example, the rancher above could make an estimate of the population mean by taking a random sampling of 100 of the cattle, taking weight measurements, and then taking the mean of those 100 observations.
+     
     
 </details>
+
+```python
+def mean(lst, trim=0):
+    lst_ = lst.copy()
+    if trim > 0:
+        lst_ = sorted(lst_)[trim:-trim]
+    return sum(lst_) / len(lst_)
+```
