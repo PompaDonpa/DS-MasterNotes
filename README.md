@@ -86,11 +86,29 @@ $$
     
 Find the mean of the dataset $ A $.
     
-$ \pmb A = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]$
+$ A = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]$
     
 ***Step 1 :*** Sum all of the values in the dataset.
     
-$ \pmb sum(A) = a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + a_9 + a_{10} $
+$ sum(A) = a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + a_9 + a_{10} $
 
+***Step 2 :*** Find the number of items in the dataset.
+
+$ length(A) = 10 $
+
+***Step 3:*** Apply the division and come to a solution.
+    
+$$
+mean(A) = \frac{sum(A)}{length(A)} = \frac{55}{10} = 5.5    
+$$    
+    
+    
+> The calculation being made above, is formally called the arithmetic mean. There are other types of means (geometric, harmonic), but they are not typically employed in statistics or probability, and this course will not include anything about them.
+    
+    -   There are a number of common notations for the mean of a collection in statistics, here are the most common:
+    
+|||
+|:-:|:---:|
+|$ \boldsymbol u $| The lowercase greek letter mu is the standard notation for a population mean |
     
 </details>
