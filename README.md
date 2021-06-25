@@ -79,7 +79,7 @@ for tup in zip(enum, lst_a, lst_b):
 The mean in statistics and probability is likely a familiar concept; the mean is commonly referred to as an average. A mean is derived by calculating a sum of all the values in a collection, then dividing that sum by the total number of items. See below for an example:
 
 $$
-frac({1}{n}) sum_({i=1}^n) a_i    
+\frac({1}{n}) \sum_{i=1}^n a_i    
 $$    
 
 </details>
