@@ -107,6 +107,7 @@ $$
     
     -   There are a number of common notations for the mean 
         of a collection in statistics, here are the most common:
+<div align="center" > 
     
 |||
 |:-:|:---:|
@@ -114,6 +115,9 @@ $$
 |$ \bar x $| Pronounced "x-bar" is the standard notation for a sample mean |
 |$ \bar X $| Capitalized x-bar is a common notation for sample mean, where $ X $ is a random variable|
  
+</div>
+    
+<br /> 
     
 ### Population vs. Sample
     
@@ -127,6 +131,8 @@ Conversely, a `sample` does not represent every possible observation, for exampl
      
     
 </details>
+
+<br />
 
 ```python
 def mean(lst, trim=0):
