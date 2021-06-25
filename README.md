@@ -86,7 +86,7 @@ $$
     
 Find the mean of the dataset $ A $.
     
-$ A = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]$
+$ A = [\quad 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\quad]$
     
 ***Step 1 :*** Sum all of the values in the dataset.
     
