@@ -105,12 +105,23 @@ $$
     
 > The calculation being made above, is formally called the arithmetic mean. There are other types of means (geometric, harmonic), but they are not typically employed in statistics or probability, and this course will not include anything about them.
     
-    -   There are a number of common notations for the mean of a collection in statistics, here are the most common:
+    -   There are a number of common notations for 
+    the mean of a collection in statistics, here are the most common:
     
 |||
 |:-:|:---:|
-|$ \[\mu\] $| The lowercase greek letter mu is the standard notation for a population mean |
+|$ \mu $| The lowercase greek letter mu is the standard notation for a population mean |
 |$ \bar x $| Pronounced "x-bar" is the standard notation for a sample mean |
 |$ \bar X $| Capitalized x-bar is a common notation for sample mean, where $ X $ is a random variable|
+ 
     
+### Population vs. Sample
+    
+In the table above, it is shown that the notation for the mean is different dependent on what type of data the mean is representing.
+    
+The study of statistics consists of the analysis and study of datasets, and there are two types of datasets, populations and samples. 
+    
+$$
+\mathit A population represents all of the possible data points or observations from a set of data, for example, a rancher who owns 1000 cattle could take the population mean of their weights by measuring the weight of all 1000 cattle, and taking their mean.  
+$$
 </details>
