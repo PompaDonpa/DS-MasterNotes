@@ -109,6 +109,8 @@ $$
     
 |||
 |:-:|:---:|
-|$ \boldsymbol u $| The lowercase greek letter mu is the standard notation for a population mean |
+|$ \[\mu\] $| The lowercase greek letter mu is the standard notation for a population mean |
+|$ \bar x $| Pronounced "x-bar" is the standard notation for a sample mean |
+|$ \bar X $| Capitalized x-bar is a common notation for sample mean, where $ X $ is a random variable|
     
 </details>
