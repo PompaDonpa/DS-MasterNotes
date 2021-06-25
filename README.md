@@ -25,6 +25,7 @@
         -   [Poisson PMF](#poisson-pmf)
         -   [Poisson PMF Dictionary](#poisson-pmf-dict)
         -   [Geometric PMF](#geometric-pmf)
+        -   [Poisson CDF](#poisson-cdf)
     -   [Binomial CDF](#binomial-cdf)
 *   [Probability](#probability)
     -   [Definition of Set](#def-of-set)
@@ -463,6 +464,18 @@ def geometric_pmf(p, k, inclusive=True):
     # else:
     #     return p * (1-p)**k
 ```
+<br />
+
+### <a id="poisson-cdf">Poisson CDF Dictionary</a>
+### `poisson_cdf()`
+* your parameters will be 
+    * `lmbda`
+    * `low_k`
+    * `high_k`
+
+
+
+
 <br />
 
 ### <a id="binomial-cdf">Binomial CDF</a>
