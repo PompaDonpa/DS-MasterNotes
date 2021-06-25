@@ -220,3 +220,78 @@ def gnome_sort(lst):
   
   return count, result
 ```
+
+## Magic Methods
+
+<details><summary>Summary</summary>
+<br />
+    
+Magic methods in Python are the special methods which add "magic" to a class. Magic methods are not meant to be invoked directly by a user, but the invocation happens internally from the class on a certain action.
+    
+**Example:**
+    
+When two numbers are added together using the + operator, internally, the **__add__()** method will be invoked to complete the addition, and return the sum.
+    
+    
+Magic methods allow user-written classes to participate in Python's built-in functionality. For example, during object creation, Python looks for the magic method called **__init__()**; if **__init__()** exists, Python invokes the method to initialize the object. Likewise, when computing the length of an object using the len() function, Python looks for the magic method called **__len__()**; if **__len__()** exists, Python executes the method to determine the object's length.
+
+So, just as the list and dictionary types provide an implementation of the **__len__()** magic method to allow us to call len() on them, a **__len__()** method can be defined in any class. Once this is done, Python will know what to do when it is passed an instance of a class to the len() function. The implementation of a **__len__()** method is entirely up to the user.
+    
+    
+### Defining a Magic Method
+
+Defining a magic method is the same as defining any other method in a class. In fact, by defining an **__init__()** method for a class in previous lessons, this should be somewhat familiar territory. Again, like any other function or method, start with def, provide the name of the magic method (surrounded by double underscores), list the required parameters in parentheses (don't forget self), and end the line with a colon. In _Code Snippet_, see an example implementation of **__len__()** method in the GalvanizeCourse class that has been used throughout the materials.
+    
+    
+_Code Snippet_
+    
+```python
+# Define the class
+class GalvanizeCourse():
+    # Define all magic methods
+    def __init__(self, name, location, size=0):
+        self.name = name
+        self.location = location
+        self.size = size
+        self.questions_asked = []
+        if self.size >= 20:
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+
+    def __len__(self):
+        return len(self.questions_asked)
+
+    # Define all other methods
+    def add_question_asked(self, question):
+        self.questions_asked.append(question)
+
+    def add_students(self, num):
+        self.size += num
+
+        if self.size >= 20:
+            print('Capacity Reached!!')
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+
+    def check_if_at_capacity(self):
+        return self.at_capacity
+
+# Instantiate object
+our_course = GalvanizeCourse('Intro Python', 'Platte', 15)
+
+# Check num of q's asked
+print(f'Check #1: {len(our_course)}')
+
+# Add two q's
+our_course.add_question_asked("What's he going to show?")
+our_course.add_question_asked('Do you know the answer?')
+
+# Check num of q's asked
+print(f'Check #2: {len(our_course)}')
+    
+    
+```
+    
+</details>
