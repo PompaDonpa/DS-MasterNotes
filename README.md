@@ -230,17 +230,17 @@ Magic methods in Python are the special methods which add "magic" to a class. Ma
     
 **Example:**
     
-When two numbers are added together using the + operator, internally, the **__add__()** method will be invoked to complete the addition, and return the sum.
+When two numbers are added together using the + operator, internally, the `**__add__()**` method will be invoked to complete the addition, and return the sum.
     
     
-Magic methods allow user-written classes to participate in Python's built-in functionality. For example, during object creation, Python looks for the magic method called **__init__()**; if **__init__()** exists, Python invokes the method to initialize the object. Likewise, when computing the length of an object using the len() function, Python looks for the magic method called **__len__()**; if **__len__()** exists, Python executes the method to determine the object's length.
+Magic methods allow user-written classes to participate in Python's built-in functionality. For example, during object creation, Python looks for the magic method called `**__init__()**`; if `**__init__()**` exists, Python invokes the method to initialize the object. Likewise, when computing the length of an object using the len() function, Python looks for the magic method called `**__len__()**`; if `**__len__()**` exists, Python executes the method to determine the object's length.
 
-So, just as the list and dictionary types provide an implementation of the **__len__()** magic method to allow us to call len() on them, a **__len__()** method can be defined in any class. Once this is done, Python will know what to do when it is passed an instance of a class to the len() function. The implementation of a **__len__()** method is entirely up to the user.
+So, just as the list and dictionary types provide an implementation of the **__len__()** magic method to allow us to call len() on them, a `**__len__()**` method can be defined in any class. Once this is done, Python will know what to do when it is passed an instance of a class to the len() function. The implementation of a `**__len__()**` method is entirely up to the user.
     
     
 ### Defining a Magic Method
 
-Defining a magic method is the same as defining any other method in a class. In fact, by defining an **__init__()** method for a class in previous lessons, this should be somewhat familiar territory. Again, like any other function or method, start with def, provide the name of the magic method (surrounded by double underscores), list the required parameters in parentheses (don't forget self), and end the line with a colon. In _Code Snippet_, see an example implementation of **__len__()** method in the GalvanizeCourse class that has been used throughout the materials.
+Defining a magic method is the same as defining any other method in a class. In fact, by defining an `**__init__()**` method for a class in previous lessons, this should be somewhat familiar territory. Again, like any other function or method, start with def, provide the name of the magic method (surrounded by double underscores), list the required parameters in parentheses (don't forget self), and end the line with a colon. In _Code Snippet_, see an example implementation of `**__len__()**` method in the GalvanizeCourse class that has been used throughout the materials.
     
     
 _Code Snippet_
@@ -293,5 +293,223 @@ print(f'Check #2: {len(our_course)}')
     
     
 ```
+
+```python
+
+Output:
+    
+Check #1: 0
+Check #2: 2  
+```
+    
+Notice that the **len()** function can now interact with instances of `**GalvanizeCourse**`. As a bit of a motivating question, think about how a real-world implementation of this might look. Perhaps, in a more robust version of this class, there would be a roster attribute which contain a list of **Student** instances, where **Student** is another class in its own right, with attributes and methods. Then perhaps `**__len__()**` would return the number of student instances in the roster.
+
+Just as one might expect, **len()** now gives the number of questions asked in the course. For reference, in the [notebook](https://colab.research.google.com/drive/1DIgJXznKVNPPBaJsFLZUMSy76bj6XAO4?usp=sharing)  with code examples, try commenting out the definition of `**__len__()**` and observe the results.
+    
+    
+### Other Magic Methods
+
+<details><summary>Summary</summary>
+<br />
+    
+It turns out that there is a large assortment of magic methods that can be implemented in user-created classes. For example, take a look at what happens when using the **print()** function on the **GalvanizeCourse** class:
+    
+`<__main__.GalvanizeCourse instance at 0x10a157a28>`
+
+This isn't very informative, this states that the **__main__()** method for a **GalvanizeCourse** instance is at **0x10a157a28**, which is a memory location; while this is very useful to the Python interpretter, there's not much value or human interpretation who wanted some representation of the object displayed on the console. To get a more informative representation of the object, use the **__str__()** method. This is the magic method that Python calls when any object is cast to a string with the **str()** constructor. And, perhaps not surprisingly, Python casts objects to strings whenever the **print()** function is invoked, this is because Python only knows how to output strings to the console.
+
+See an implementation of the **__str__()** method below, after this implementation **print()** can be used to display an instance of **GalvanizeCourse** which is an easily interpretted representation of the object in the console.   
+    
+_Code Snippet_
+    
+```python
+# Define class
+class GalvanizeCourse():
+    # Define all magic methods
+    def __init__(self, name, location, size=0):
+        self.name = name
+        self.location = location
+        self.size = size
+        self.questions_asked = []
+
+        if self.size >= 20:
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+
+    def __len__(self):
+        return len(self.questions_asked)
+
+    def __str__(self):
+        our_course_string = '{}, location: {}'
+        return our_course_string.format(self.name, self.location)
+
+    # Define all regular methods
+    def add_question_asked(self, question):
+        self.questions_asked.append(question)
+
+    def add_students(self, num):
+        self.size += num
+
+        if self.size >= 20:
+            print('Capacity Reached!!')
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+
+# Create an instance
+our_course = GalvanizeCourse('Intro Python', 'Platte', 15)
+
+# Test the print() statement
+print(our_course)    
+    
+```
+```python
+Output:
+    
+Intro Python, location: Platte
+```
+    
+Shown above when the **__str__()** method is defined, the **__str__()** method returns an informative string. Now, when an instance of **GalvanizeCourse** is printed, there is something useful.
+    
+
+</details>
+
+    
+### Another magic method
+    
+<details><summary>Summary</summary>
+<br />
+   
+If two integers, floats, strings, etc. can be tested for equality with use of the equality operator, **==** , why couldn't a user-created class do the same? As it turns out, this can be done by defining the **__eq__()** method.
+
+    
+How does a class know when it's being compared to another object to check for equality? If you take a look at the documentation for the magic _**_eq__()** method [here](https://docs.python.org/3.6/reference/datamodel.html#object.__eq__), it shows what the parameters are: `object.__eq__(self, other)`. We already know that **self** is a reference to the object that a method is called on, and **other** is a reference to an object as well, the second parameter in this case.
+    
+The way that Python evaluates an expression like `x == y` is that it calls the **__eq__()** magic method on the object on the left side the expression (i.e., `x`). As with any other method call, Python passes a reference to the object as the method's first argument **(self)**. Then, it looks on the right side of the **==** and passes a reference to the object there as the second argument to **__eq__()**, in this case `y`. So, the **other** argument that is shown above is just a reference to the second object from the right side of the equality operator. A reference to this object works the same as any other, the attributes and methods of the **other** object can be referenced using dot notation.
+
+For example, consider two instances of **GalvanizeCourse** equal if they have the same name and location. See below for an example:
+ 
+_Code Snippet_
+    
+```python
+class GalvanizeCourse():
+    # Define the class
+    def __init__(self, name, location, size=0):
+        self.name = name
+        self.location = location
+        self.size = size
+        self.questions_asked = []
+
+        if self.size >= 20:
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+    # Magic Methods
+    def __len__(self):
+        return len(self.questions_asked)
+
+    def __str__(self):
+        our_course_string = '{}, location: {}'
+        return our_course_string.format(self.name, self.location)
+
+    def __eq__(self, other):
+        return self.name == other.name and self.location == other.location
+
+    # Regular Methods
+    def add_question_asked(self, question):
+        self.questions_asked.append(question)
+
+    def add_students(self, num):
+        self.size += num
+
+        if self.size >= 20:
+            print('Capacity Reached!!')
+            self.at_capacity = True
+        else:
+            self.at_capacity = False
+    
+```
+
+Notice that we have access to information about the **other** instance through the usual dot notation. Also, since would expect the result of a **==** expression to be `True` or `False`, we've made our `__eq__()` magic method return a boolean value. In general, you should take special care to make sure to return things from your magic methods that make sense within the context!
+ 
+<br />
+    
+### More magic methods
+    
+A good deal of the seemingly simple functionality that is possible using Python built-in types can also be implemented via magic methods in our custom classes. Take a look at [this link](https://docs.python.org/3.6/reference/datamodel.html#special-method-names) to get a sense of all the things magic methods can do.
+    
+  
+</details>    
     
 </details>
+    
+<h4 id="magic-challenge">Magic Methods Challenge</h4>
+    
+Fill in the following methods in the class according to their docstrings. Do not change the name of the class.
+    
+```python
+
+class LinearPolynomial():
+    def __init__(self, m, b):
+        self.m = m
+        self.b = b
+
+        
+    def __str__(self):
+        """
+        Returns a string representation of the LinearPolynomial instance
+        referenced by self.
+
+        Returns
+        -------
+        A string formatted like:
+
+        mx + b
+
+        Where m is self.m and b is self.b
+        """
+        pass 
+
+    def __add__(self, other):
+        """
+        This function adds the other instance of LinearPolynomial
+        to the instance referenced by self.
+
+        Returns
+        -------
+        The sum of this instance of LinearPolynomial with another
+        instance of LinearPolynomial. This sum will not change either
+        of the instances reference by self or other. It returns the
+        sum as a new instance of LinearPolynomial, instantiated with
+        the newly calculated sum.
+        """
+        pass   
+    
+```
+_Solution_
+    
+```python
+class LinearPolynomial():
+    def __init__(self, m, b):
+        self.m = m
+        self.b = b
+    
+    def __str__(self):
+        return f"{self.m}x + {self.b}"
+    
+    def __add__(self, other):
+        return LinearPolynomial( self.m + other.m, self.b + other.b )
+
+    
+lp1 = LinearPolynomial(10, 7)
+print(lp1) # 10x + 7
+    
+    
+lp2 = LinearPolynomial(20, 14)
+print(lp2) # 20x + 14
+    
+    
+print(lp1 + lp2) # 30x + 21
+    
+```
