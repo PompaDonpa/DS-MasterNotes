@@ -922,20 +922,13 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
-$$
-f\ lbrace
-   \ lbrace 
-     \frac{
-       1+\left\{x,y\right\}
-     }{
-       \left(
-          \frac{x}{y}+\frac{y}{x}
-       \right)
-       \left(u+1\right)
-     }+a
-   \right]^{3/2}
-\right)
-$$
+
+$$\sum_{n=1}^\infty \frac{1}{n^2} \to
+  \textstyle \sum_{n=1}^\infty \frac{1}{n^2} \to
+  \displaystyle \sum_{n=1}^\infty \frac{1}{n^2}$$
+  
+$\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$
+versus $\lim_{t \to 0} \int_t^1 f(t)\, dt$.
 
 
 <br />
