@@ -285,7 +285,7 @@ def median(lst):
 <hr />
 
 
-<a id="mode"><h1>Mode</h1></a>
+<a><h1 id="mode">Mode</h1></a>
 
 
 <details><summary>Summary</summary>
