@@ -923,7 +923,7 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
 $$
-f\lparentheses
+f\lbrace
    \left[ 
      \frac{
        1+\left\{x,y\right\}
