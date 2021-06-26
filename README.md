@@ -8,6 +8,7 @@
 * ##   [Statistics](#statistics)
     -   [Mean](#mean)
     -   [Median](#median)
+    -   [Mode](#mode)
     -   [Variance](#variance)
     -   [Five-Number Summary](#five-number)
     -   [IQR](#iqr)
@@ -141,6 +142,26 @@ def median(lst):
         return lst_sorted[mid]
     else:
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
+```
+<br />
+
+### <a id="mode">Mode</a>
+
+```python
+def mode(lst):
+    dict_counter = {}
+    for item in lst:
+        if item in dict_counter.keys():
+            dict_counter[item] += 1
+        else:
+            dict_counter[item] = 1
+    max_freq = max(list(dict_counter.values()))
+    modes = [item for item, freq in dict_counter.items() if freq == max_freq]
+    
+    if len(modes) == len(lst):
+        return None
+    else:
+        return modes
 ```
 <br />
 
