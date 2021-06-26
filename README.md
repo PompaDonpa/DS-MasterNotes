@@ -919,15 +919,19 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 
 # <a id="mathjax">MathJax</a>
 * [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) for GitHub 
-
-$$
-\sum_{x=1}^{25} a_x
-$$
-
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
-
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
+
+$$
+\left\{
+\begin{aligned} 
+a_1x+b_1y+c_1z &=d_1+e_1 \\ 
+a_2x+b_2y&=d_2 \\ 
+a_3x+b_3y+c_3z &=d_3 
+\end{aligned} 
+\right. 
+$$
 
 <br />
 <hr />
