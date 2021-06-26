@@ -23,7 +23,7 @@
     -   [Set Intersection](#set-inter)
     -   [Set Difference](#set-diff)
     -   [Set Complement](#set-complement)
-    -   &ensp;
+    -   [Calculating Probability](#calc-prob)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
     -   [Bernoulli](#bernoulli)
