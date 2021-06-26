@@ -315,6 +315,56 @@ print(remove_outliers(a)) # [590, 615, 575, 608, 540, 555, 679]
 
 ### <a id="variance">Variance</a>
 
+<details>
+
+*   The purpose of both the variance and standard deviation statistics are to express an easily interpretable measure of spread in a collection.
+*   The variance can be interpreted as the average squared deviations of each number from the mean, and it is calculated as such.
+*   The reason why we square the deviations is so we can deal with only positive values, If we didn't square the values our variation would end up being zero for every distribution
+
+    
+* **`Population Variance`**
+
+
+$$\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2$$
+
+
+* **`Sample Variance`**
+
+$$
+s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline x)^2
+$$
+
+*   **`Recall`**
+
+    * $\mu$ : population mean
+    * $\overline x$ : sample mean
+    
+-   You can see the two formulas for variation are very similar, the primary difference being that the population variance is averaged by dividing by $n$
+-   In the computation of a sample standard deviation, we use $n-1$. `The Bessel's correction`
+-   This correction is made, because it partially corrects the bias in the estimation of a population variance. [Bessel's](https://en.wikipedia.org/wiki/Bessel%27s_correction)
+    
+    
+_Example 1_
+    
+>   Find the variance of the following population $A$ assume all measurements are in inches:    
+    $ A = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]$
+
+**Step 1 :** Find the mean of $A$
+    
+$$
+\mu = \frac{73+65+72+74+69+70+72+73}{8} = 71
+$$    
+    
+**Step 2 :** Find the sum of the squared differences.
+$$
+\sum{i=0}^8(x_i - \mu_)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60
+$$
+
+</details>
+
+
+
+
 * **`Population Variance`**
 
 
@@ -1006,6 +1056,7 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 * [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima)
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
+* [Greek Symbols & Letters](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols)
 
 <div align="center">
 
