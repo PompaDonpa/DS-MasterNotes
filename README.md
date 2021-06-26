@@ -630,12 +630,13 @@ def complement(sample_space, set1):
 
 ## <a id="axioms-of-prob">Axioms of Probability</a>
 
-<br />
-
 ### Equating Set Algebra Laws with Boolean Logic
 
 * Consider the concept of `True` as being a logical descriptor for a set $A$ containing $n$ elements.
 * In this sense, all the above laws will apply to both Sets and Boolean operations
+
+<br />
+
 
 |     Set Operator    | Python Boolean Operator |
 |:-------------------:|:-----------------------:|
@@ -676,7 +677,7 @@ print( (a and b) == (b and a) ) # --> True
 <details><summary>Associative</summary>
 <br />
 
-    * (A ∪ B) ∪ C = A ∪ (B ∪ C) = A ∪ B ∪ C
+* (A ∪ B) ∪ C = A ∪ (B ∪ C) = A ∪ B ∪ C
 * (AB)C = A(BC) = ABC
 
 Set Logic
@@ -707,7 +708,7 @@ print( ((a and b) and c) == (a and (b and c)) ) # --> True
 <details><summary>Distributive</summary>
 <br />
 
- * A ∪ (BC) = (A ∪ B)(A ∪ C) 
+* A ∪ (BC) = (A ∪ B)(A ∪ C) 
 * A(B ∪ C) = (AB) ∪ (AC)
 
 
@@ -732,7 +733,8 @@ c = True
 print( (a or (b and c)) == ((a or b) and (a or c)) ) # --> True
 print( (a and (b or c)) == ((a and b) or (a and c)) ) # --> True   
     
-</details>    
+</details>  
+
 <br />
 
 <details><summary>Idempotent Laws</summary>
@@ -805,6 +807,7 @@ print( (a or (a and b)) == a) # --> True
 print( (a and (a or b)) == a) # --> True
     
 </details>
+
 <br />
 <hr />
 
@@ -863,6 +866,7 @@ b = False
 
 print( (not (a and b)) == (not a or not b) ) # --> True
 ```
+
 
 <hr />
 
