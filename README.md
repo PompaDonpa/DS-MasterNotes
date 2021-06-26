@@ -930,6 +930,11 @@ $$\sum_{n=1}^\infty \frac{1}{n^2} \to
 $\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$
 versus $\lim_{t \to 0} \int_t^1 f(t)\, dt$.
 
+$f(n) =
+\begin{cases}
+\frac{n}{2},  & \text{if $n$ is even} \\[2ex]
+3n+1, & \text{if $n$ is odd}
+\end{cases}$
 
 <br />
 <hr />
