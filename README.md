@@ -923,7 +923,7 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
 
-$$ \left\{ \begin{array}{l}
+$$ \left. \{ \begin{array}{l}
 0 = c_x-a_{x0}-d_{x0}\dfrac{(c_x-a_{x0})\cdot d_{x0}}{\|d_{x0}\|^2} + c_x-a_{x1}-d_{x1}\dfrac{(c_x-a_{x1})\cdot d_{x1}}{\|d_{x1}\|^2} \\[2ex] 
 0 = c_y-a_{y0}-d_{y0}\dfrac{(c_y-a_{y0})\cdot d_{y0}}{\|d_{y0}\|^2} + c_y-a_{y1}-d_{y1}\dfrac{(c_y-a_{y1})\cdot d_{y1}}{\|d_{y1}\|^2} \end{array} \right. 
 $$
