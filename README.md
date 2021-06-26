@@ -188,7 +188,7 @@ _Example #1_
 <sub>Consider the incomes of the following ten households. By calculating both the mean and median, it is possible to make a determination as to which of these two statistics describes the incomes most accurately.</sub>
 
 $$
-A = [ \$30\,000, \$35\,000, \$41\,000, \$45\,000, \$50\,000, \$57\,000, \$57\,500, \$59\,000, \$60\,000, \$457\,000 ]
+A = [\quad\$30\,000,\quad\$35\,000,\quad\$41\,000,\quad\$45\,000,\quad\$50\,000,\quad\$57\,000,\quad\$57\,500,\quad\$59\,000,\quad\$60\,000,\quad\$457\,000\quad]
 $$
 
 
