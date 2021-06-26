@@ -209,6 +209,6 @@ _Step 3 :_ Find the value at the index found in step 2
 _Solution_
 <br />
   
-$ med(B) = \~x_B = 16  $ 
+$ med(B) = \~ x_B = 16  $ 
   
 </details>
