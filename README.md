@@ -193,9 +193,8 @@ $$
 $$
 mean = \mu = \$89,000 \qquad median = \tilde x = \$53,500
 $$
-> <sub>Solution
-    
-The mean of the household incomes is **$89,150** and the median is **$53,500**. Here the median does a better job of describing a typical household income from the collection. The mean is greatly skewed by a single income that is far greater than the others. The mean implies that a typical household would have over **$89,000** of income, despite there being only one household with an income greater than **$60,000**.</sub>
+> Solution
+> <sub>The mean of the household incomes is **$89,150** and the median is **$53,500**. Here the median does a better job of describing a typical household income from the collection. The mean is greatly skewed by a single income that is far greater than the others. The mean implies that a typical household would have over **$89,000** of income, despite there being only one household with an income greater than **$60,000**.</sub>
 
     
 </details>    
