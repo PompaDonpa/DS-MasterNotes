@@ -307,7 +307,9 @@ def mode(lst):
     else:
         return modes  
 ```  
-< hr />
+
+<hr />
+  
 <br />
 
 <a id="tuples"><h2>A note on tuples</h2></a>
