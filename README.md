@@ -356,9 +356,48 @@ $$
 $$    
     
 **Step 2 :** Find the sum of the squared differences.
+    
 $\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60$
 
+**Step 3 :** Divide the sum above by $\n$ (or multiply by \frac{1}{n})
+    
+$\o^2 = \frac{60}{8} = 7.5$
+    
+    
+>   <sub>**Solution**</sub>
+>   <sub>We can see here that our population variance is $7.5 inches^2$. It is important to note here that a variation calculated will always result in terms of the original unit squared. This leaves something to be desired in terms of interpretability; we'll discuss that in the second half of this lesson when dealing with standard deviations.</sub>    
 
+<br />
+
+_Example 2_
+    
+>   Calculate the variance for the same numerical collection above, this time assuming it is a sample, call the sample dataset $B$. 
+    
+    $ B = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]$
+
+**Step 1 :** Find the mean of $B$
+    
+$$
+\bar x = \frac{73+65+72+74+69+70+72+73}{8} = 71
+$$    
+    
+**Step 2 :** Find the sum of the squared differences.
+    
+$\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60$
+
+**Step 3 :** Divide the sum above by $\n$ (or multiply by \frac{1}{n})
+    
+$\o^2 = \frac{60}{7} = 8.571$
+    
+    
+>   <sub>**Solution**</sub>
+>   <sub>The variance of the sample dataset  $B$ is $8.751$, larger than the population's variance.</sub>   
+
+>   **A note about the application of `Bessel's correction`:**
+    
+>   The difference in the variances between the sample and the population are a byproduct of applying Bessel's correction. In short, when one finds the variance of a population, they are sure to include all possible outliers. In contrast, when sampling from a population there is a chance that very few (or none!) outliers will end up in the sample dataset. Because of this the variance will likely be smaller than the true variance of the population. Because the object is to make inferences about a population from a sample, the application of Bessel's correction makes the variance from a sample more likely to be accurately representative of the population.    
+
+<br />    
 </details>
 
 
