@@ -213,7 +213,7 @@ $ med(B) = \tilde x_B = 16  $
 
 <br />
   
-`Median from an even-length collection`
+### `Median from an even-length collection`
   
 When dealing with collections of an even length there is no term that lies directly in the middle of the collection. In other words, the median of an even-length collection is the `average of the two middle-most values`. Simply find the length of the collection, $ N $, and then take the average of the values at the $ \frac{N}{2} $ and $ \frac{N+1}{2} $indices.
 
@@ -260,7 +260,7 @@ There is no absolute consensus on the notation for median in statistics, but her
 |:-:|:---:|
 |$ med(A) $| Where $A$ is the collection on which to take the median |
 |$ \tilde x $| Lower-case x with a tilde over the top of it is often used to denote the median |
-|$ \bar X $| Capitalized x-bar is a common notation for sample mean, where $ X $ is a random variable|
+
  
 </div>  
     
