@@ -17,6 +17,13 @@
     -   [Remove Outliers](#remove-outliers)
     -   [Standard Deviation](#standard-deviation)
 * ##    [Probability](#probability)
+    -   [Definition of Set](#def-of-set)
+    -   [Set Union](#set-union)
+    -   [Set Union for more than 2 events](#set-union2)
+    -   [Set Intersection](#set-inter)
+    -   [Set Difference](#set-diff)
+    -   [Set Complement](#set-complement)
+    -   &ensp;
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
     -   [Bernoulli](#bernoulli)
@@ -27,13 +34,6 @@
         -   [Geometric PMF](#geometric-pmf)
         -   [Poisson CDF](#poisson-cdf)
     -   [Binomial CDF](#binomial-cdf)
-
-    -   [Definition of Set](#def-of-set)
-    -   [Set Union](#set-union)
-    -   [Set Union for more than 2 events](#set-union2)
-    -   [Set Intersection](#set-inter)
-    -   [Set Difference](#set-diff)
-    -   [Set Complement](#set-complement)
     -   [Axioms of Probability](#axioms-of-prob)
 
 <div align="center">
@@ -499,223 +499,6 @@ def stdev(lst, sample=True):
 <hr />
 
 
-### <a id="permutations">Permutations</a>
-
-$$
-nPk = \frac{n!}{(n-k)!}
-$$
-
-```python
-def permutations(n, k):
-    return int(factorial(n) / factorial(n-k))
-```
-
-##### Slightly more optimized:
-
-```python
-def permutations(n, k):
-    perm = 1
-    for i in range(n, n-k, -1):
-        perm *= i
-    return perm
-```
-<br />
-
-### <a id="combinations">Combinations</a>
-
-$$
-nCk = \frac{n!}{((n-k)! k!)}
-$$
-
-```python
-def combinations(n, k):
-    return int(factorial(n) / (factorial(n-k) * factorial(k)))
-
-# Slightly more optimal:
-def combinations(n, k):
-    perm = 1
-    for i in range(n, n-k, -1):
-        perm *= i
-    return int(perm / factorial(k))
-```
-<br />
-
-### <a id="bernoulli">Bernoulli</a>
-
-```python
-def bernoulli(p_success=0.5):
-    draw = random() # gets a val betw 0 and 1
-
-    if draw < p_success:
-        return True
-    else:
-        return False
-```
-<br />
-
-### <a id="binomial-pmf">Binomial PMF</a>
-* 3 parameters
--   $n$ = number of bernoulli trials
--   $p$ = probability of success on any given bernoulli trial
--   $k$ = specific number of successes for which to find the probability
-####    `binomial_pmf(n,p,k)`
-$$
-P(X=k) = {n \choose k} p^k(1-p)^{n-k}
-$$
-
-
-```python
-def binomial_pmf(n, k, p=0.5):
-    return combinations(n, k) * (p**k) * (1-p)**(n-k)
-```
-<br />
-
-### <a id="binomial-pmf-dict">Binomial PMF Dictionary</a>
-
-#### `binomial_pmf_dict()`
-
-This should take 4 parameters:
-* `n` the number of trials
-* `k_low` the low value of $k$ in the dictionary
-* `k_high` the high value of $k$ in the dictionary
-* `p=0.5` the probability of success of a given bernoulli trial
-
-
-
-```python
-def binomial_pmf_dict(n, k_low, k_high, p=0.5):
-    d = dict()
-
-    for k in range(k_low, k_high+1):
-        d[k] = binomial_pmf(n, k, p)
-
-    return d
-
-d = binomial_pmf_dict(8, 0, 8, p=0.25)
-
-for k, v in d.items():
-    print(f'{k}: {v}')
-```
-
-<br />
-
-### <a id="poisson-pmf">Poisson PMF</a>
-
-### `poisson_pmf()`
-* $e = 2.71828$
-* Note, both the constant `e` and the `factorial()` function are available from the `math` module.
-
-
-$$
-P(\lambda, k \text{ events}) = \frac{e^{-\lambda}\lambda^k}{k!}
-$$
-
-```python
-from math import e, factorial
-
-# print(e) # 2.718281828459045
-
-def poisson_pmf(lmbda, k):
-    return lmbda**k * e**(-lmbda) / factorial(k)
-```
-<br />
-
-### <a id="poisson-pmf-dict">Poisson PMF Dictionary</a>
-### `poisson_pmf_dict()`
-* your parameters will be 
-    * `lmbda`
-    * `low_k`
-    * `high_k`
-
-Holding `lmbda` constant, write a function that returns a dictionary showing the probs for number of events from `low_k` to `high_k` (inclusive)
-
-```python
-def poisson_pmf_dict(lmbda, low_k, high_k):
-    d = dict()
-
-    for k in range(low_k, high_k+1):
-        d[k] = poisson_pmf(lmbda, k)
-
-    return d
-
-d = poisson_pmf_dict(10, 0, 30)
-
-for k, v in d.items():
-    print(f'{k}: {round(v, 6)}')
-```
-<br />
-
-### <a id="geometric-pmf">Geometric PMF</a>
-### `geometric_pmf()`
-
-* `p` : probability
-* `k` : number of failures (inclusive or exclusive of the 1st success)
-* `inclusive=True` : whether or not to use inclusive or exclusive pmf
-
-PMF calculating the number of trials up to **and including** the first success
-
-$$
-P(X=k) = p (1-p)^{k-1}
-$$
-
-PMF calculating the number of trials **before** the first success
-
-$$
-P(X=k) = p (1-p)^{k}
-$$
-
-```python
-def geometric_pmf(p, k, inclusive=True):
-    return p * (1-p)**(k-inclusive)
-    # if inclusive:
-    #     return p * (1-p)**(k-1)
-    # else:
-    #     return p * (1-p)**k
-```
-<br />
-
-### <a id="poisson-cdf">Poisson CDF Dictionary</a>
-### `poisson_cdf()`
-* your parameters will be 
-    * `lmbda`
-    * `high_k`
-
-```python
-def poisson_cdf(lmbda, k_high):
-    cdf = 0.0
-
-    for k in range(k_high+1):
-        cdf += poisson_pmf(lmbda, k)
-
-    return cdf
-```
-
-
-<br />
-
-### <a id="binomial-cdf">Binomial CDF</a>
-
-####    `binomial_cdf(n, k_high, p=0.5)`
-
-$$
-P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
-$$
-
-
-```python
-def binomial_cdf(n, k_high, p=0.5):
-    cumulative = 0.0
-
-    for k in range(0, k_high+1):
-        cumulative += binomial_pmf(n, k, p)
-
-    return cumulative
-```
-
-<br />
-
-<hr />
-
 
 # <a id="probability">Probability</a>
 
@@ -1098,7 +881,222 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 <hr />
 
 <br />
+### <a id="permutations">Permutations</a>
 
+$$
+nPk = \frac{n!}{(n-k)!}
+$$
+
+```python
+def permutations(n, k):
+    return int(factorial(n) / factorial(n-k))
+```
+
+##### Slightly more optimized:
+
+```python
+def permutations(n, k):
+    perm = 1
+    for i in range(n, n-k, -1):
+        perm *= i
+    return perm
+```
+<br />
+
+### <a id="combinations">Combinations</a>
+
+$$
+nCk = \frac{n!}{((n-k)! k!)}
+$$
+
+```python
+def combinations(n, k):
+    return int(factorial(n) / (factorial(n-k) * factorial(k)))
+
+# Slightly more optimal:
+def combinations(n, k):
+    perm = 1
+    for i in range(n, n-k, -1):
+        perm *= i
+    return int(perm / factorial(k))
+```
+<br />
+
+### <a id="bernoulli">Bernoulli</a>
+
+```python
+def bernoulli(p_success=0.5):
+    draw = random() # gets a val betw 0 and 1
+
+    if draw < p_success:
+        return True
+    else:
+        return False
+```
+<br />
+
+### <a id="binomial-pmf">Binomial PMF</a>
+* 3 parameters
+-   $n$ = number of bernoulli trials
+-   $p$ = probability of success on any given bernoulli trial
+-   $k$ = specific number of successes for which to find the probability
+####    `binomial_pmf(n,p,k)`
+$$
+P(X=k) = {n \choose k} p^k(1-p)^{n-k}
+$$
+
+
+```python
+def binomial_pmf(n, k, p=0.5):
+    return combinations(n, k) * (p**k) * (1-p)**(n-k)
+```
+<br />
+
+### <a id="binomial-pmf-dict">Binomial PMF Dictionary</a>
+
+#### `binomial_pmf_dict()`
+
+This should take 4 parameters:
+* `n` the number of trials
+* `k_low` the low value of $k$ in the dictionary
+* `k_high` the high value of $k$ in the dictionary
+* `p=0.5` the probability of success of a given bernoulli trial
+
+
+
+```python
+def binomial_pmf_dict(n, k_low, k_high, p=0.5):
+    d = dict()
+
+    for k in range(k_low, k_high+1):
+        d[k] = binomial_pmf(n, k, p)
+
+    return d
+
+d = binomial_pmf_dict(8, 0, 8, p=0.25)
+
+for k, v in d.items():
+    print(f'{k}: {v}')
+```
+
+<br />
+
+### <a id="poisson-pmf">Poisson PMF</a>
+
+### `poisson_pmf()`
+* $e = 2.71828$
+* Note, both the constant `e` and the `factorial()` function are available from the `math` module.
+
+
+$$
+P(\lambda, k \text{ events}) = \frac{e^{-\lambda}\lambda^k}{k!}
+$$
+
+```python
+from math import e, factorial
+
+# print(e) # 2.718281828459045
+
+def poisson_pmf(lmbda, k):
+    return lmbda**k * e**(-lmbda) / factorial(k)
+```
+<br />
+
+### <a id="poisson-pmf-dict">Poisson PMF Dictionary</a>
+### `poisson_pmf_dict()`
+* your parameters will be 
+    * `lmbda`
+    * `low_k`
+    * `high_k`
+
+Holding `lmbda` constant, write a function that returns a dictionary showing the probs for number of events from `low_k` to `high_k` (inclusive)
+
+```python
+def poisson_pmf_dict(lmbda, low_k, high_k):
+    d = dict()
+
+    for k in range(low_k, high_k+1):
+        d[k] = poisson_pmf(lmbda, k)
+
+    return d
+
+d = poisson_pmf_dict(10, 0, 30)
+
+for k, v in d.items():
+    print(f'{k}: {round(v, 6)}')
+```
+<br />
+
+### <a id="geometric-pmf">Geometric PMF</a>
+### `geometric_pmf()`
+
+* `p` : probability
+* `k` : number of failures (inclusive or exclusive of the 1st success)
+* `inclusive=True` : whether or not to use inclusive or exclusive pmf
+
+PMF calculating the number of trials up to **and including** the first success
+
+$$
+P(X=k) = p (1-p)^{k-1}
+$$
+
+PMF calculating the number of trials **before** the first success
+
+$$
+P(X=k) = p (1-p)^{k}
+$$
+
+```python
+def geometric_pmf(p, k, inclusive=True):
+    return p * (1-p)**(k-inclusive)
+    # if inclusive:
+    #     return p * (1-p)**(k-1)
+    # else:
+    #     return p * (1-p)**k
+```
+<br />
+
+### <a id="poisson-cdf">Poisson CDF Dictionary</a>
+### `poisson_cdf()`
+* your parameters will be 
+    * `lmbda`
+    * `high_k`
+
+```python
+def poisson_cdf(lmbda, k_high):
+    cdf = 0.0
+
+    for k in range(k_high+1):
+        cdf += poisson_pmf(lmbda, k)
+
+    return cdf
+```
+
+
+<br />
+
+### <a id="binomial-cdf">Binomial CDF</a>
+
+####    `binomial_cdf(n, k_high, p=0.5)`
+
+$$
+P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
+$$
+
+
+```python
+def binomial_cdf(n, k_high, p=0.5):
+    cumulative = 0.0
+
+    for k in range(0, k_high+1):
+        cumulative += binomial_pmf(n, k, p)
+
+    return cumulative
+```
+
+<br />
+
+<hr />
 
 # <a id="machine-learning">Machine Learning Workflow</a>
 
