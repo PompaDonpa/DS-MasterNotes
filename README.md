@@ -912,7 +912,7 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 
 
 # <a id="derivations">Derivations</a>
-* [Derivation of a Perceptron]()
+* [Derivation of a Perceptron](https://levelup.gitconnected.com/training-a-single-perceptron-405026d61f4b)
 
 
 
