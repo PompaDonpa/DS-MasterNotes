@@ -356,9 +356,8 @@ $$
 $$    
     
 **Step 2 :** Find the sum of the squared differences.
-$$
-\sum{i=0}^8(x_i - \mu_)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60
-$$
+$\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60$
+
 
 </details>
 
