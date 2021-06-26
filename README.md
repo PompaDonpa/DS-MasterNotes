@@ -169,7 +169,7 @@ def mode(lst):
 
 ### <a id="central-tendency">Central Tendency</a>
 
-<details><summary>...</summary>
+<details>
     
 +   A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. 
 +   As such, measures of central tendency are sometimes called measures of central location. 
