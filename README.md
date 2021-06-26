@@ -36,7 +36,7 @@
 
 | | | | | | |  | |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|[Machine Learning Workflow](#machine-learning)|[Sorting Algorithms](#sorting-algo)|[Derivations](#derivations)|[Relevant Links](#relevant-links)|[Markdown](#markdown)|[Bash Scripter](#bash-scripter)|[Bootstrap](#bootstrap)|[MathJax](#mathjax)|
+|[Machine Learning Workflow](#machine-learning)|[Sorting Algorithms](#sorting-algo)|[Derivations](#derivations)|[MathJax](#mathjax)||[Bash Scripter](#bash-scripter)||[Relevant Links](#relevant-links)|
 |||| | | | | |
 |||| | | | | |
 
@@ -887,46 +887,48 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 
 <br />
 
-<hr />
-
-
-
 ### <a id="cross-validation">Cross Validation</a>
-
-```python
-# train/test split
-```
-
 ### <a id="k-cross">k-fold Cross Validation</a>
 
+<hr />
 
 <br />
 
+
+# <a id="sorting-algo">Sorting Algorithms</a> 
+
+<br />
+
+## <a id="bubble-sort">Bubble Sort</a>
+
+```python
+# hand coded algorithm
+# library-called bubble sort
+```
+
+<br />
 <hr />
 
 
-# <a id="relevant-links">Relevant Links</a>
+# <a id="derivations">Derivations</a>
+* [Derivation of a Perceptron]()
 
-* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
-
-* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
 
 <br />
-
 <hr />
 
+# <a id="mathjax">MathJax</a>
+* [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) for GitHub 
 
-# <a id="markdown">Markdown</a>
+$$
+\sum_{x=1}^{25} a_x
+$$
 
-## Anchors / Internal reference links
-
-In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to link to and refer to it on the same page by `[link text](#abcd)`
 
 
 
 <br />
-
 <hr />
 
 
@@ -943,50 +945,17 @@ git push
 ```
 
 <br />
-
-<hr />
-
-### <a id="bootstrap">Bootstrap</a>
-
-<br />
-
 <hr />
 
 
-# <a id="sorting-algo">Sorting Algorithms</a> 
 
-<br />
+# <a id="relevant-links">Relevant Links</a>
 
-## <a id="bubble-sort">Bubble Sort</a>
+* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
 
-```python
-# hand coded algorithm
-```
-
-```python
-# library-called bubble sort
-```
-
-<br />
-
-<hr />
+* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
 
-# <a id="derivations">Derivations</a>
-* [Derivation of a Perceptron]()
-
-
-
-<br />
-
-<hr />
-
-# <a id="mathjax">MathJax</a>
-* [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) for GitHub 
-
-$$
-\sum_{x=1}^{25} a_x
-$$
 
 <hr />
 
