@@ -113,6 +113,8 @@ list(zip(*matrix))
 
 <br />
 
+<hr />
+
 # <a id="statistics">Statistics</a>
 
 ### <a id="mean">Mean</a>
@@ -468,6 +470,11 @@ def binomial_cdf(n, k_high, p=0.5):
 
     return cumulative
 ```
+
+<br />
+
+<hr />
+
 
 # <a id="probability">Probability</a>
 
