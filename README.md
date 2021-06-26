@@ -495,6 +495,8 @@ def stdev(lst, sample=True):
     return sqrt(variance(lst, sample))
 ```
 <br />
+<hr />
+
 
 ### <a id="permutations">Permutations</a>
 
