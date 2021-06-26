@@ -9,6 +9,7 @@
     -   [Mean](#mean)
     -   [Median](#median)
     -   [Mode](#mode)
+        -   [Central Tendency](##central-tendency)
     -   [Variance](#variance)
     -   [Five-Number Summary](#five-number)
     -   [IQR](#iqr)
@@ -164,6 +165,35 @@ def mode(lst):
     else:
         return modes
 ```
+<br />
+
+### <a id="mode">Central Tendency</a>
+
++   A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. 
++   As such, measures of central tendency are sometimes called measures of central location. 
++   They are also classed as summary statistics.
+
+
+<details><summary>Measures</summary>
+    
+#### [The Median is Resistant to Outliers]()
+*   The primary difference between the mean or median is their levels of resistance to outliers. 
+*   The mean is not very resistant to outliers, especially when dealing with a dataset that has non-symmetric outliers.
+
+
+> If a collection has extreme outliers, the mean may describe the distribution "center" inaccurately. A classic example of this is when looking at household incomes. Households with far greater incomes skew the mean to the point where it no longer accurately describes the dataset.
+    
+_Example #1_
+    
+<sub>Consider the incomes of the following ten households. By calculating both the mean and median, it is possible to make a determination as to which of these two statistics describes the incomes most accurately.</sub>
+
+$$
+A = [ \$30\,000, \$35\,000, \$41\,000, \$45\,000, \$50\,000, \$57\,000, \$57\,500, \$59\,000, \$60\,000, \$457\,000 ]
+$$
+
+
+    
+</details>    
 <br />
 
 ### <a id="five-number">Five-Number Summary</a>
