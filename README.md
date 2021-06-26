@@ -34,9 +34,9 @@
     -   [Set Complement](#set-complement)
     -   [Axioms of Probability](#axioms-of-prob)
 
-| | | | | | |  | |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|[Machine Learning Workflow](#machine-learning)|[Sorting Algorithms](#sorting-algo)|[Derivations](#derivations)|[MathJax](#mathjax)||[Bash Scripter](#bash-scripter)||[Relevant Links](#relevant-links)|
+| | | | | | |  | | | | |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|[Machine Learning Workflow](#machine-learning)| |[Sorting Algorithms](#sorting-algo)| |[Derivations](#derivations)| |[MathJax](#mathjax)||[Bash Scripter](#bash-scripter)||[Relevant Links](#relevant-links)|
 
 
 <hr />        
