@@ -958,9 +958,17 @@ $$
     
 If we consider $n$ to be the base of a counting system, then we can determine all permutations $k$ by a counting/reduction approach.
     
-1.  Count in base n system
+1.  Count in base $n$ system
     -   ex: $n = 3$
 >   $\text{ 000 010 020 100 110 120 200 210 220 001 011 021 101 111 121 201 211 221 002 012 022 102 112 122 202 212 222 }$
+    
+2.  Reduce counts that have duplicate items
+>   $\text{ 000 010 020 100 110 120 200 210 220 001 011 021 101 111 121 201 211 221 002 012 022 102 112 122 202 212 222 }
+    
+3.  Consider $k$ items
+    -   ex: $k = 3$
+>   |012 | 021 | 102 | 120 | 201 | 210| 
+|----|-----|-----|-----|-----|-----|
     
 </details>    
 <br />
