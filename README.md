@@ -8,7 +8,7 @@
 <br />
 
   
-# <a id="tuples"><h2>A note on tuples</h2></a>
+<a id="tuples"><h2>A note on tuples</h2></a>
 
 Both enumerate and zip produce a data type called a tuple. You can learn more about the tuple type in Intermediate Python. For now, you can think of a tuple as simply a special kind of list.
 
@@ -71,7 +71,7 @@ for tup in zip(enum, lst_a, lst_b):
 <hr />
 
 
-# <a id="mean"><h3>Mean</h3></a>
+<a id="mean"><h2>Mean</h2></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -148,7 +148,7 @@ def mean(lst, trim=0):
 
 
 
-# <a id="median"><h3>Median</h3></a>
+<a id="median"><h2>Median</h2></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -160,41 +160,53 @@ Similar to `mean`, the `median` is another measure of central tendency. The medi
 ### Example 1:
     
 Find the median of the numerical dataset $ A $.
-    
+<br />
+  
 $ A = [\quad 1,2,3,4,5,6,7,8,9 \quad]$
     
     -   The median above is the center value in the sorted list, where there are 
         four items in the collection below the median, and four items above the median.    
-
+<br />
+  
 _Solution_    
  
 $ median(A) = 5 $    
-    
+
+<br />    
+
 #### `Median from an odd-length collection`    
     
 When a collection has an odd number of items, determining the median is as simple as sorting the data and identifying the center value. In mathematical terms, in a sorted list of length $\mathit N $, the **index** of the median value is $\frac{N+1}{2} $.
-    
+<br />
+  
 ### Example 1:
     
 Consider this example with 11 items: Find the median of the dataset $ B $.
     
 $ B = [\quad 10,10,12,13,15,16,17,19,20,20,21 \quad]$
-    
+
+<br />
+  
 _Step 1 :_ Find the length of the dataset
     
 $ N = length(B) = 11 $
-    
+
+<br />    
+  
 _Step 2 :_ Find the index of the center value
     
 $ \frac{N+1}{2} = \frac{12}{2} = 6 $   
 
+<br />
+  
 _Step 3 :_ Find the value at the index found in step 2
     
 -   The median is located at the 6th index of the sorted list, which is 16. 
     Double check by making sure that there are an equal number of items on either side of the median.
     
 _Solution_
-
-$ med(B) = \~ x_B = 16  $ 
+<br />
+  
+$ med(B) = \hat{~} x_B = 16  $ 
   
 </details>
