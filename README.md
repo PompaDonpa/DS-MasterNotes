@@ -1,18 +1,14 @@
 # Data Science & Python - Code Snippets
 
-*   [Tuples](#tuples)
-*   [Mean](#mean)
-*   [Median](#median)
-*   [Mode](#mode)
-<!-- *   [Markdown](#markdown)
-*   [Bash Scripter](#bash-scripter)
-*   [Python](#python)
-    -   [Comprehensions](#comprehensions)
-    -   [Functions](#functions)
-        -   [Factorial](#factorial)
-        -   [Transpose a Matrix](#transpose) -->
+* ##  [Tuples](#tuples)
+* ##  [Mean](#mean)
+* ##  [Median](#median)
+* ##  [Mode](#mode)
+
+<br />
+
   
-# <a id="tuples">A note on tuples</a>
+# <a id="tuples"><h2>A note on tuples</h2></a>
 
 Both enumerate and zip produce a data type called a tuple. You can learn more about the tuple type in Intermediate Python. For now, you can think of a tuple as simply a special kind of list.
 
@@ -69,9 +65,13 @@ for tup in zip(enum, lst_a, lst_b):
 (2, 5, 6)
 (3, 7, 8)
 ```
+
 <br />
 
-# <a id="mean">Mean</a>
+<hr />
+
+
+# <a id="mean"><h3>Mean</h3></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -141,3 +141,59 @@ def mean(lst, trim=0):
         lst_ = sorted(lst_)[trim:-trim]
     return sum(lst_) / len(lst_)
 ```
+
+<br />
+
+<hr />
+
+
+
+# <a id="mean"><h3>Mean</h3></a>
+
+<details><summary>Summary</summary>
+<br />
+
+Similar to `mean`, the median is another measure of central tendency. The median can be considered the "middle" value of some sorted numerical collection. Half of the collection is equal to or lesser than the median, and half of the collection is equal to or greater than the median. In circumstances where a collection has extreme outliers (specifically datasets which contain outliers which are not symmetrical) the median can be a more robust, or superior measure to the mean. More comparisons between the mean and median are made in the next lesson.
+    
+> Denoting or relating to a value or quantity lying at the midpoint of a frequency distribution of observed values or quantities, such that there is an equal probability of falling above or below it.
+    
+### Example 1:
+    
+Find the median of the numerical dataset $ A $.
+    
+$ A = [\quad 1,2,3,4,5,6,7,8,9 \quad]$
+    
+    -   The median above is the center value in the sorted list, where there are 
+        four items in the collection below the median, and four items above the median.    
+
+_Solution_    
+ 
+$ median(A) = 5 $    
+    
+#### `Median from an odd-length collection`    
+    
+When a collection has an odd number of items, determining the median is as simple as sorting the data and identifying the center value. In mathematical terms, in a sorted list of length $\mathit N $, the **index** of the median value is $\frac{N+1}{2} $.
+    
+### Example 1:
+    
+Consider this example with 11 items: Find the median of the dataset $ B $.
+    
+$ B = [\quad 10,10,12,13,15,16,17,19,20,20,21 \quad]$
+    
+_Step 1 :_ Find the length of the dataset
+    
+    - $ N = length(B) = 11 $
+    
+_Step 2 :_ Find the index of the center value
+    
+    - $ \frac{N+1}{2} = \frac{12}{2} = 6 $   
+
+_Step 3 :_ Find the value at the index found in step 2
+    
+    -   The median is located at the 6th index of the sorted list, which is 16. 
+        Double check by making sure that there are an equal number of items on either side of the median.
+    
+_Solution_
+
+$ med(B) = \hat~ x_B = 16  $    
+</details>
