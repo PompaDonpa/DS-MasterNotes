@@ -675,7 +675,6 @@ $$
 \sum_{x=1}^{25} a_x
 $$
 
+<hr />
 
-<div align="center">
-    <a src="#top"><h3>UP</h3></a>
-</div>
+### [UP](#top)
