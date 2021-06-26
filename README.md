@@ -37,8 +37,8 @@
 | | | | | | |  | |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |[Machine Learning Workflow](#machine-learning)|[Sorting Algorithms](#sorting-algo)|[Derivations](#derivations)|[Relevant Links](#relevant-links)|[Markdown](#markdown)|[Bash Scripter](#bash-scripter)|[Bootstrap](#bootstrap)|[MathJax](#mathjax)|
-|`Cross validation`&ensp;[Here](#cross-validation)|`Bubble Sort`&ensp;[Here](#bubble-sort)|| | | | | |
-|`K - Fold Cross`&ensp;[Here](#k-cross)||| | | | | |
+|||| | | | | |
+|||| | | | | |
 
 <hr />        
 
