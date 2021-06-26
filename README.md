@@ -167,14 +167,12 @@ def mode(lst):
 ```
 <br />
 
-### <a id="central-tendency">Central Tendency</a>
+### <details><summary><a id="central-tendency">Central Tendency</a></summary>
 
 +   A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. 
 +   As such, measures of central tendency are sometimes called measures of central location. 
 +   They are also classed as summary statistics.
 
-
-<details><summary>Measures</summary>
     
 #### [The Median is Resistant to Outliers](#central-tendency)
 *   The primary difference between the mean or median is their levels of resistance to outliers. 
