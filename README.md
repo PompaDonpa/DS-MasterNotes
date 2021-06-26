@@ -1,9 +1,9 @@
 # Data Science & Python - Code Snippets
 
-* ###  [Tuples](#tuples)
-* ###  [Mean](#mean)
-* ###  [Median](#median)
-* ###  [Mode](#mode)
+* [Tuples](#tuples)
+* [Mean](#mean)
+* [Median](#median)
+* [Mode](#mode)
 
 <br />
 
