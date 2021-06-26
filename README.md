@@ -203,10 +203,12 @@ _Step 3 :_ Find the value at the index found in step 2
     
 -   The median is located at the 6th index of the sorted list, which is 16. 
     Double check by making sure that there are an equal number of items on either side of the median.
-    
+
+<br />
+  
 _Solution_
 <br />
   
-$ med(B) = \hat{~} x_B = 16  $ 
+$ med(B) = \~x_B = 16  $ 
   
 </details>
