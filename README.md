@@ -700,6 +700,7 @@ c = True
 
 print( ((a or b) or c) == (a or (b or c)) ) # --> True
 print( ((a and b) and c) == (a and (b and c)) ) # --> True
+```
     
 </details>
 
@@ -733,6 +734,7 @@ c = True
 
 print( (a or (b and c)) == ((a or b) and (a or c)) ) # --> True
 print( (a and (b or c)) == ((a and b) or (a and c)) ) # --> True   
+```
     
 </details>  
 
@@ -813,6 +815,7 @@ c = True
 
 print( (a or (a and b)) == a) # --> True
 print( (a and (a or b)) == a) # --> True
+```
     
 </details>
 
@@ -864,7 +867,6 @@ a = True
 b = False
 
 print( (not (a or b)) == ((not a) and (not b)) ) # --> True
-
 ```
 
 
