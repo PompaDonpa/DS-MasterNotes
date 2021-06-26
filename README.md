@@ -881,6 +881,58 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 <hr />
 
 <br />
+
+# <a id="calc-prob">Calculating Probability</a>
+
+<details>
+
+### **Probability Theory** 
+    
+Inferential Statistics is the practice of using mathematical analysis to make inferences about a population from a sample. The mathematics which underly inferential statistics are largely based on probability theory.
+    
+Calculating probability is attempting to figure out the likelihood of a specific event happening, given some number of attempts. The most fundamental and important probability calcululation is defined as:
+
+The probability of some event $A$ occuring is the number of possible outcomes in that event, divided by the total number of possible outcomes in the sample space. That is,
+    
+$$
+\text{Number of Outcomes in} A = |A| = \text{"The Cardinality of } A\text{"}
+$$
+$$
+\text{Number of Outcomes in} S = |S| = \text{"The Cardinality of } S\text{"}
+$$
+ 
+$$
+P(A) = \frac{|A|}{|S|}
+$$    
+
+***Example***
+    
+>   Given a fair six-sided die, what is the probability of rolling a 5?
+    
+$ Event A = \text{Rolling a five}
+$P(A) = \frac{1}{6} = .166667$
+    
+>   <sub>Solution</sub>
+>   <sub>The total number of possible outcomes is six, in other words the cardinality of the sample space is six. There is only one outcome in which our die will show five pips, so the cardinality of our event $A$ is 1. Hence, our probability is $\frac{1}{6}$.</sub>
+    
+<div align="center">
+    
+|Notation|Meaning|
+|:------:|:-----:|    
+|$P(A)$|Probability of A|
+|$P(A^c)$|Probability of A complement|
+|$P(AB)$|Probability of A intersect B|
+|$P(A\cupB$|Probability of A union B|
+|$P(A|B)$|probability of A given B|    
+  
+    
+    
+</div>
+</details>
+<br />
+
+
+
 ### <a id="permutations">Permutations</a>
 
 $$
@@ -1138,6 +1190,7 @@ def binomial_cdf(n, k_high, p=0.5):
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 * [Greek Symbols & Letters](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols)
+* [Mathematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
 <div align="center">
 
