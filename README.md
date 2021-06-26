@@ -1,8 +1,5 @@
 # Data Science - MasterNotes
 
-*   [Relevant Links](#relevant-links)
-*   [Markdown](#markdown)
-*   [Bash Scripter](#bash-scripter)
 *   [Python](#python)
     -   [Comprehensions](#comprehensions)
     -   [Functions](#functions)
@@ -38,6 +35,9 @@
 *   [Machine Learning Workflow](#machine-learning)
     -   [Cross validation](#cross-validation)
     -   [K - Fold Cross Validation](#k-cross)
+*   [Relevant Links](#relevant-links)
+*   [Markdown](#markdown)
+*   [Bash Scripter](#bash-scripter)
 *   [Bootstrap](#bootstrap)
 *   [Sorting Algorithms](#sorting-algo)
     -   [Bubble Sort](#bubble-sort)
@@ -47,37 +47,6 @@
  
 
   
-# <a id="relevant-links">Relevant Links</a>
-
-* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
-
-* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
-
-<br />
-
-# <a id="markdown">Markdown</a>
-
-## Anchors / Internal reference links
-
-In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to link to and refer to it on the same page by `[link text](#abcd)`
-
-<br />
-
-
-# <a id="bash-scripter">Bash Scripter</a>
-* bash profile location on OSX : `~./bash_profile`
-
-```bash
-function gitadder(){
-git pull
-git add .
-git commit -m "Auto Updated: $(date '+%a)%M:%H %h %d %Y)"
-git push
-}
-```
-
-<br />
-
 
 # <a id="python" >Python</a>
 
@@ -635,6 +604,40 @@ def complement(sample_space, set1):
 ```
 
 ### <a id="k-cross">k-fold Cross Validation</a>
+
+
+
+# <a id="relevant-links">Relevant Links</a>
+
+* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
+
+* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
+<br />
+
+# <a id="markdown">Markdown</a>
+
+## Anchors / Internal reference links
+
+In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to link to and refer to it on the same page by `[link text](#abcd)`
+
+<br />
+
+
+# <a id="bash-scripter">Bash Scripter</a>
+* bash profile location on OSX : `~./bash_profile`
+
+```bash
+function gitadder(){
+git pull
+git add .
+git commit -m "Auto Updated: $(date '+%a)%M:%H %h %d %Y)"
+git push
+}
+```
+
+<br />
+
 
 ### <a id="bootstrap">Bootstrap</a>
 
