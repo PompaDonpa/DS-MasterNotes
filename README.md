@@ -347,7 +347,9 @@ $$
 _Example 1_
     
 >   Find the variance of the following population $A$ assume all measurements are in inches:    
-    $ A = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]$
+$$ 
+A = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]
+$$
 
 **Step 1 :** Find the mean of $A$
     
@@ -357,11 +359,15 @@ $$
     
 **Step 2 :** Find the sum of the squared differences.
     
-$\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60$
+$$
+\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60
+$$
 
-**Step 3 :** Divide the sum above by $\n$ (or multiply by \frac{1}{n})
+**Step 3 :** Divide the sum above by $n$ (or multiply by \frac{1}{n})
     
-$\o^2 = \frac{60}{8} = 7.5$
+$$
+o^2 = \frac{60}{8} = 7.5
+$$
     
     
 >   <sub>**Solution**</sub>
@@ -373,7 +379,9 @@ _Example 2_
     
 >   Calculate the variance for the same numerical collection above, this time assuming it is a sample, call the sample dataset $B$. 
     
-    $ B = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]$
+$$
+B = [\quad 73,\quad 65,\quad72,\quad74,\quad69,\quad70,\quad72,\quad73\quad]
+$$
 
 **Step 1 :** Find the mean of $B$
     
@@ -383,11 +391,15 @@ $$
     
 **Step 2 :** Find the sum of the squared differences.
     
-$\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60$
+$$
+\sum_{i=0}^8 (x_i - \mu)^2 \quad = \quad (73-71)^2 + (65-71)^2 + \dots + (73-71)^2 \quad = \quad 60
+$$
 
 **Step 3 :** Divide the sum above by $\n$ (or multiply by \frac{1}{n})
     
-$\o^2 = \frac{60}{7} = 8.571$
+$$
+o^2 = \frac{60}{7} = 8.571
+$$
     
     
 >   <sub>**Solution**</sub>
