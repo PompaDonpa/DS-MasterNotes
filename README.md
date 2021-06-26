@@ -628,7 +628,7 @@ def complement(sample_space, set1):
 
 <br />
 
-## <a id="axioms-of-prob">Axioms of Probability</a>
+## <a id="axioms-of-prob"><h1>Axioms of Probability</h1></a>
 
 ### Equating Set Algebra Laws with Boolean Logic
 
@@ -637,6 +637,7 @@ def complement(sample_space, set1):
 
 <br />
 
+<div align="center">
 
 |     Set Operator    | Python Boolean Operator |
 |:-------------------:|:-----------------------:|
@@ -644,7 +645,8 @@ def complement(sample_space, set1):
 |Intersection|`and`|
 |Complement|`not`|
 
-
+</div>
+    
 <details><summary>Commutative</summary>
 <br />
 
