@@ -895,10 +895,10 @@ Calculating probability is attempting to figure out the likelihood of a specific
 The probability of some event $A$ occuring is the number of possible outcomes in that event, divided by the total number of possible outcomes in the sample space. That is,
     
 $$
-\text{Number of Outcomes in} A = |A| = \text{"The Cardinality of } A\text{"}
+\text{Number of Outcomes in } A = |A| = \text{"The Cardinality of } A\text{"}
 $$
 $$
-\text{Number of Outcomes in} S = |S| = \text{"The Cardinality of } S\text{"}
+\text{Number of Outcomes in } S = |S| = \text{"The Cardinality of } S\text{"}
 $$
  
 $$
@@ -909,7 +909,7 @@ $$
     
 >   Given a fair six-sided die, what is the probability of rolling a 5?
     
-$ Event A = \text{Rolling a five}
+$ Event A = \text{Rolling a five}$
 $P(A) = \frac{1}{6} = .166667$
     
 >   <sub>Solution</sub>
@@ -922,8 +922,8 @@ $P(A) = \frac{1}{6} = .166667$
 |$P(A)$|Probability of A|
 |$P(A^c)$|Probability of A complement|
 |$P(AB)$|Probability of A intersect B|
-|$P(A\cupB$|Probability of A union B|
-|$P(A|B)$|probability of A given B|    
+|$P(A \cup B$|Probability of A union B|
+|$P(A \mid B)$|probability of A given B|    
   
     
     
