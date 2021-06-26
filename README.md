@@ -486,6 +486,9 @@ def dedupe_in_order(lst):
 
     return deduped
 ```
+
+<br />
+
 ### <a id="set-union">Set Union</a>
 * The union of two sets is a new set that contains all of the elements that are in at least one of the two sets.
 * Common Notation for the union of events A and B: 
@@ -501,6 +504,10 @@ def union(set1, set2):
             set_union.append(item)
     return set_union
 ```
+
+<br />
+
+
 ### <a id="set-union2">Set Union for more than 2 events</a>
 The union can be extrapolated to more than two events
 
@@ -519,6 +526,8 @@ def union_mult_sets(*mult_sets):
                 set_union.append(item)
     return set_union
 ```
+
+<br />
 
 ### <a id="set-inter">Set Intersection</a>
 * The intersection of two sets is a new set that contains all of the elements that are members of both sets which comprise the intersection
@@ -550,6 +559,8 @@ def intersection_mult(*mult_sets):
     return set_intersect
 ```
 
+<br />
+
 ### <a id="set-diff">Set Difference</a>
 * Set Difference is anything in one set that isn’t the other.
     *   Syntax:
@@ -569,6 +580,8 @@ def difference(set1, set2):
             set_difference.append(item)
     return set_difference
 ```
+
+<br />
 
 ### <a id="set-complement">Complement</a>
 *   The complement of a set is the set which represents all members of the sample space which are not in the event.
