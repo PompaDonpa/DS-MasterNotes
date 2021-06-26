@@ -71,7 +71,7 @@ for tup in zip(enum, lst_a, lst_b):
 <hr />
 
 
-<a id="mean"><h2>Mean</h2></a>
+<a id="mean"><h1>Mean</h1></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -82,7 +82,7 @@ $$
 \frac{1}{n} \sum_{i=1}^n a_i    
 $$    
 
-### Example 1:
+#### Example 1:
     
 Find the mean of the dataset $ A $.
     
@@ -148,7 +148,7 @@ def mean(lst, trim=0):
 
 
 
-<a id="median"><h2>Median</h2></a>
+<a id="median"><h1>Median</h1></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -157,7 +157,7 @@ Similar to `mean`, the `median` is another measure of central tendency. The medi
     
 > Denoting or relating to a value or quantity lying at the midpoint of a frequency distribution of observed values or quantities, such that there is an equal probability of falling above or below it.
     
-### Example 1:
+#### Example 1:
     
 Find the median of the numerical dataset $ A $.
 <br />
@@ -179,7 +179,7 @@ $ median(A) = 5 $
 When a collection has an odd number of items, determining the median is as simple as sorting the data and identifying the center value. In mathematical terms, in a sorted list of length $\mathit N $, the **index** of the median value is $\frac{N+1}{2} $.
 <br />
   
-### Example 2:
+#### Example 2:
     
 Consider this example with 11 items: Find the median of the dataset $ B $.
     
@@ -187,26 +187,27 @@ $ B = [\quad 10,10,12,13,15,16,17,19,20,20,21 \quad]$
 
 <br />
   
-_Step 1 :_ Find the length of the dataset
+**Step 1 :** Find the length of the dataset
     
 $ N = length(B) = 11 $
 
 <br />    
   
-_Step 2 :_ Find the index of the center value
+**Step 2 :**  Find the index of the center value
     
 $ \frac{N+1}{2} = \frac{12}{2} = 6 $   
 
 <br />
   
-_Step 3 :_ Find the value at the index found in step 2
+**Step 3 :** Find the value at the index found in step 2
     
 -   The median is located at the 6th index of the sorted list, which is 16. 
     Double check by making sure that there are an equal number of items on either side of the median.
 
 <br />
   
-_Solution_
+**Solution**
+  
 <br />
   
 $ med(B) = \tilde x_B = 16  $ 
@@ -217,7 +218,7 @@ $ med(B) = \tilde x_B = 16  $
   
 When dealing with collections of an even length there is no term that lies directly in the middle of the collection. In other words, the median of an even-length collection is the `average of the two middle-most values`. Simply find the length of the collection, $ N $, and then take the average of the values at the $ \frac{N}{2} $ and $ \frac{N+1}{2} $indices.
 
-### Example 3:
+#### Example 3:
     
 Find the median of  $ B $ where
     
@@ -225,32 +226,32 @@ $ C= [\quad 120, 124, 125, 125, 135, 150, 160, 170 \quad]$
 
 <br />
   
-_Step 1 :_ Determine whether there are an even or odd number of items
+**Step 1 :** Determine whether there are an even or odd number of items
     
 $ N = length(C) = 8 $
 
 <br />    
   
-_Step 2 :_ Find the indices of the two middle-most values
+**Step 2 **: Find the indices of the two middle-most values
     
 $ \frac{N}{2} = 4 \\ \frac{N+1}{2} = 5 $   
 
 <br />
   
-_Step 3 :_ Find the mean of the $ 4th $ and $ 5th $ terms of $ C $
+**Step 3 :** Find the mean of the $ 4th $ and $ 5th $ terms of $ C $
     
 $ med(C) = \tilde x_C = \frac{125+135}{2} = 130 $
 
 <br />
   
-_Solution_
+**Solution**
 <br />
   
 Here, the `n'th` (4th) term is 125, and the `(n+1)'th` (5th) term is 135. The mean of these two values is `130`, therefore the median of the collection is `130`. Similar to the previous examples, there is an equal number of items above and below the median (in this case, there are **4** items on each side).
 
 <br />
 
-_Notations:_
+**Notations :**
   
 There is no absolute consensus on the notation for median in statistics, but here are some common notations:  
   
