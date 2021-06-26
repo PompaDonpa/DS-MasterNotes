@@ -630,10 +630,243 @@ def complement(sample_space, set1):
 
 ## <a id="axioms-of-prob">Axioms of Probability</a>
 
-
 <br />
 
+### Equating Set Algebra Laws with Boolean Logic
+
+* Consider the concept of `True` as being a logical descriptor for a set $A$ containing $n$ elements.
+* In this sense, all the above laws will apply to both Sets and Boolean operations
+
+|     Set Operator    | Python Boolean Operator |
+|:-------------------:|:-----------------------:|
+|Union|`or`|
+|Intersection|`and`|
+|Complement|`not`|
+
+
+<details><summary>Commutative</summary>
+<br />
+
+* A ∪ B = B ∪ A
+* AB = BA
+
+Set Logic
+
+```python
+set1 = {'a', 'b', 'c'}
+set2 = {'c', 'd', 'e'}
+
+print(set1.union(set2) == set2.union(set1)) # --> True
+print(set1.intersection(set2) == set2.intersection(set1)) # --> True
+```
+
+Boolean Logic
+
+```python
+a = True
+b = False
+
+print( (a or b) == (b or a) ) # --> True
+print( (a and b) == (b and a) ) # --> True
+```    
+    
+</details>
+<br />
+
+<details><summary>Associative</summary>
+<br />
+
+    * (A ∪ B) ∪ C = A ∪ (B ∪ C) = A ∪ B ∪ C
+* (AB)C = A(BC) = ABC
+
+Set Logic
+
+```python
+set1 = {'a', 'b', 'c'}
+set2 = {'c', 'd', 'e'}
+set3 = {'a', 'e', 'f'}
+
+print((set1.union(set2)).union(set3) == (set3.union(set2)).union(set1)) # --> True
+print((set1.intersection(set2)).intersection(set3) == (set3.intersection(set2)).intersection(set1)) # --> True
+```
+
+Boolean Logic
+
+```python
+a = True
+b = False
+c = True
+
+print( ((a or b) or c) == (a or (b or c)) ) # --> True
+print( ((a and b) and c) == (a and (b and c)) ) # --> True
+    
+    
+</details>
+<br />
+
+<details><summary>Distributive</summary>
+<br />
+
+ * A ∪ (BC) = (A ∪ B)(A ∪ C) 
+* A(B ∪ C) = (AB) ∪ (AC)
+
+
+Set Logic
+
+```python
+set1 = {'a', 'b', 'c'}
+set2 = {'c', 'd', 'e'}
+set3 = {'a', 'e', 'f'}
+
+print( (set2.intersection(set3)).union(set1) == (set1.union(set2)).intersection((set1.union(set3))) ) # --> True
+print( (set2.union(set3)).intersection(set1) == (set1.intersection(set2)).union((set1.intersection(set3))) ) # --> True
+```
+
+Boolean Logic
+
+```python
+a = True
+b = False
+c = True
+
+print( (a or (b and c)) == ((a or b) and (a or c)) ) # --> True
+print( (a and (b or c)) == ((a and b) or (a and c)) ) # --> True   
+    
+</details>    
+<br />
+
+<details><summary>Idempotent Laws</summary>
+<br />
+    
+* _when redundant operations achieve the same result_
+* A ∪ A = A
+* AA = A
+
+
+
+Set Logic
+
+```python
+set1 = {'a', 'b', 'c'}
+
+print( set1.union(set1) == set1 ) # --> True
+print( set1.union(set1) == set1 ) # --> True
+```
+
+Boolean Logic
+
+```python
+a = True
+
+print( (a or a) == a ) # --> True
+print( (a and a) == a ) # --> True
+```   
+    
+</details>    
+<br />
+
+<details><summary>Domination Laws</summary>
+<br />
+    
+    
+* Recall:
+    * U = Universal Set, he set which contains all subsets
+    * ∅  = Empty Set = { }
+* A ∩ U = A
+* A ∩ ∅ = ∅    
+
+</details>
+<br />
+
+<details><summary>Absorption Laws</summary>
+<br />    
+    
+* A ∪ (AB) = A
+* A(A ∪ B) = A
+
+Set Logic
+
+```python
+set1 = {'a', 'b', 'c'}
+set2 = {'c', 'd', 'e'}
+
+print( set1.intersection(set2).union(set1) == set1 ) # --> True
+print( set1.intersection(set1.union(set2)) == set1) # --> True
+```
+
+Boolean Logic
+
+```python
+a = True
+b = False
+c = True
+
+print( (a or (a and b)) == a) # --> True
+print( (a and (a or b)) == a) # --> True
+    
+</details>
+<br />
 <hr />
+
+### Identity Property
+
+* A ∪ ∅ = A
+
+### Complement Laws for Universal and Empty Set
+
+* ~∅ = U
+* ~U = ∅
+
+### Involution Law
+* ~( ~A) = A
+
+```python
+a = True
+print( (not (not a)) == a) # --> True
+```
+
+### A helpful, unnamed law
+* AB ∪ A~B = A
+
+
+```python
+a = True
+b = False
+
+print( ((a and b) or (a and not b)) == a) # --> True
+
+```
+
+### DeMorgan’s Laws
+* 1st: ~(A ∪ B) = ~A ~B
+* 2nd: ~(AB) = ~A ∪ ~B
+
+These laws are very helpful for logic and circuit reduction. They are commonly explored in interview questions
+
+
+### ~(A ∪ B) = ~A ~B
+
+```python
+a = True
+b = False
+
+print( (not (a or b)) == ((not a) and (not b)) ) # --> True
+
+```
+
+
+### ~(AB) = ~A ∪ ~B
+
+```python
+a = True
+b = False
+
+print( (not (a and b)) == (not a or not b) ) # --> True
+```
+
+<hr />
+
+<br />
 
 
 # <a id="machine-learning">Machine Learning Workflow</a>
