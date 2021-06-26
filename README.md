@@ -142,7 +142,6 @@ def median(lst):
     else:
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
 ```
-<br />
 
 ### <a id="mode">Mode</a>
 
