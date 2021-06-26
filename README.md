@@ -285,7 +285,7 @@ def median(lst):
 <hr />
 
 
-<a id="mode"><h1>Mode</h1></a>
+<h1><a id="mode">Mode></a></h1
 
 <details><summary>Summary</summary>
 <br />
@@ -293,7 +293,7 @@ def median(lst):
 The `mode` of a numerical collection is a different approach than mean or median. Instead of finding the center of a collection, the mode seeks to find the item with the greatest frequency. In other words, the mode describes the value that occurs most often. Again, there are situations in which the mode may do a better job of describing a particular collection than a mean or median could based on the characteristics of the distribution.
   
 
-It is worth noting that mode can be used for collections that are not numerical. The mode can determine frequency for nominal (categorical or named) data as well. The mean cannot be used to describe categorical data, and the median can only be used to describe categorical data if that data is ordinal in nature. Ordinal refers to data that has an inherent order . . . such as $ \left\{ 1, 2, 3 \rigth\}$  or ${ low, medium, high}$.  
+It is worth noting that mode can be used for collections that are not numerical. The mode can determine frequency for nominal (categorical or named) data as well. The mean cannot be used to describe categorical data, and the median can only be used to describe categorical data if that data is ordinal in nature. Ordinal refers to data that has an inherent order . . . such as {1, 2, 3}  or {low, medium, high}.  
   
 #### Example 1:
     
