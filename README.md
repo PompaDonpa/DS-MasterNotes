@@ -461,11 +461,11 @@ def variance(lst, sample=True):
   
 ***Notations :***
     
-$\sigma \qquad :$&emsp;lowercase sigma is used for the standard deviation of a population
+$\sigma\quad :$&ensp;lowercase sigma is used for the standard deviation of a population
     
-$s \qquad :$&emsp;lowercase $s$ is typically used to representation the standard deviation of a sample
+$s\quad :$&ensp;lowercase $s$ is typically used to representation the standard deviation of a sample
     
-$sd \qquad :$&emsp;the combination of lowercase $sd$ is also commonly used for both standard deviations
+$sd\quad :$&ensp;the combination of lowercase $sd$ is also commonly used for both standard deviations
    
     
 <br />
