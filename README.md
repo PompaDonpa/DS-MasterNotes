@@ -1,4 +1,4 @@
-# Data Science & Python - Code Snippets
+<a id="top"><h1>Data Science & Python - Code Snippets</h1></a>
 
 * [Mean](#mean)
 * [Median](#median)
@@ -374,3 +374,4 @@ for tup in zip(enum, lst_a, lst_b):
 
 <hr />
   
+[UP](#top)
