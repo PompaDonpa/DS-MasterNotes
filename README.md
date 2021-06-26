@@ -9,7 +9,7 @@
     -   [Mean](#mean)
     -   [Median](#median)
     -   [Mode](#mode)
-        -   [Central Tendency](##central-tendency)
+        -   [Central Tendency](#central-tendency)
     -   [Variance](#variance)
     -   [Five-Number Summary](#five-number)
     -   [IQR](#iqr)
@@ -167,7 +167,7 @@ def mode(lst):
 ```
 <br />
 
-### <a id="mode">Central Tendency</a>
+### <a id="central-tendency">Central Tendency</a>
 
 +   A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. 
 +   As such, measures of central tendency are sometimes called measures of central location. 
@@ -176,7 +176,7 @@ def mode(lst):
 
 <details><summary>Measures</summary>
     
-#### [The Median is Resistant to Outliers]()
+#### [The Median is Resistant to Outliers](#central-tendency)
 *   The primary difference between the mean or median is their levels of resistance to outliers. 
 *   The mean is not very resistant to outliers, especially when dealing with a dataset that has non-symmetric outliers.
 
@@ -185,7 +185,7 @@ def mode(lst):
     
 _Example #1_
     
-<sub>Consider the incomes of the following ten households. By calculating both the mean and median, it is possible to make a determination as to which of these two statistics describes the incomes most accurately.</sub>
+Consider the incomes of the following ten households. By calculating both the mean and median, it is possible to make a determination as to which of these two statistics describes the incomes most accurately.
 
 $$
 A = [\quad\$30\,000,\quad\$35\,000,\quad\$41\,000,\quad\$45\,000,\quad\$50\,000,\quad\$57\,000,\quad\$57\,500,\quad\$59\,000,\quad\$60\,000,\quad\$457\,000\quad]
@@ -193,8 +193,10 @@ $$
 $$
 mean = \mu = \$89,000 \qquad median = \tilde x = \$53,500
 $$
-> <sub>_Solution_
+> <sub>Solution
+    
 The mean of the household incomes is **$89,150** and the median is **$53,500**. Here the median does a better job of describing a typical household income from the collection. The mean is greatly skewed by a single income that is far greater than the others. The mean implies that a typical household would have over **$89,000** of income, despite there being only one household with an income greater than **$60,000**.</sub>
+
     
 </details>    
 <br />
