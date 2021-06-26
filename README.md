@@ -41,6 +41,8 @@ def queue_time(queue, processors):
 
 ```
 
+<br />
+
 <a id="binary"><h2>Binary Search</h2></a>
 
 When lists get incredibly long it becomes incredibly slow to search through the list. Because of this computer scientists have spent years developing techniques to make finding items in a long list quicker. Binary search is a technique used to find a specific item in a list. Learn more about binary search [here](https://en.wikipedia.org/wiki/Binary_search_algorithm)  . Essentially, binary search boils down to this:
@@ -90,6 +92,8 @@ def bin_search(lst, el):
 
 Note, the raise **`ValueError()`** is safety measure included in this function just in case you attempt to find an element that is not present; it is not necessary to include in your solution to this challenge as the test cases used by Learn always include the item to find in the input list.
 
+<br />
+
 
 <a id="sort"><h2>Sort by Row or Column</h2></a>
 
@@ -129,6 +133,8 @@ def sort_by_direction(arr, direc):
     return rtn
 ```
 
+<br />
+
 <a id="bubble"><h2>Bubble Sort</h2></a>&emsp;[i](https://en.wikipedia.org/wiki/Bubble_sort)
 
 Bubble sort  is a classic algorithm taught in computer science (and a common interview question). Write a function called **`on_the_bubble`** that takes a **`list`** of numbers as an argument. This function should return a **`tuple`** where the first item represents the number of swaps that were performed in order to sort the **`list`**, and where the second element represents the sorted **`list`** itself.
@@ -151,6 +157,8 @@ def on_the_bubble(lst):
   return swaps, result
         
 ```
+
+<br />
 
 <a id="caesar"><h2>Caesar Chiper</h2></a>
 
@@ -187,6 +195,8 @@ def caesar_cipher(msg, shift):
     return new_msg
 ```
 
+<br />
+
 <a id="parentheses"><h2>Valid Parentheses</h2></a>
 
 Write a function called **`valid_parentheses`** which checks to make sure every **`"("`** has a matching **`")"`**. This function should take in a string, and return a boolean. If every **`"("`** has a matching **`")"`** this function should return **`True`**, if it does not, the function should return **`False`**.
@@ -216,6 +226,8 @@ def valid_parentheses(string):
     return match == 0
 ```
 
+<br />
+
 <a id="gnome"><h2>Gnome Sort</h2></a>
 
 Gnome sort is a technique that expands upon the ideas of bubble sort (see last weeks weekly challenge for bubble sort). Instead of iterating through the whole list and swapping items as they come. Gnome sort finds an item that is out of place and iterates back through the list and places it where it needs to be and then continues going forward through the list. Read more about Gnome sort [here](https://en.wikipedia.org/wiki/Gnome_sort) .
@@ -241,6 +253,8 @@ def gnome_sort(lst):
   
   return count, result
 ```
+
+<br />
 
 <a id="magic"><h2>Magic Methods</h2></a>
 
