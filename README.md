@@ -1,6 +1,6 @@
 <a id="top"><h1>Data Science - MasterNotes</h1></a>
 
-*   [Python](#python)
+## *   [Python](#python)
     -   [Comprehensions](#comprehensions)
     -   [Functions](#functions)
         -   [Factorial](#factorial)
