@@ -910,6 +910,7 @@ $$
 >   Given a fair six-sided die, what is the probability of rolling a 5?
     
 $ Event A = \text{Rolling a five}$
+    
 $P(A) = \frac{1}{6} = .166667$
     
 >   <sub>Solution</sub>
