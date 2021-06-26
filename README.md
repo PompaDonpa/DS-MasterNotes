@@ -196,6 +196,33 @@ $$
 > <sub>***Solution***</sub>
 > <sub>The mean of the household incomes is **$89,150** and the median is **$53,500**. Here the median does a better job of describing a typical household income from the collection. The mean is greatly skewed by a single income that is far greater than the others. The mean implies that a typical household would have over **$89,000** of income, despite there being only one household with an income greater than **$60,000**.</sub>
 
+
+#### [The Mean is Preferable in Large Datasets with Few Outliers](#central-tendency)
+    
+*   There are some situations where the mean is considered a preferable measure to median; typically these are situations in which there are a large number of      items in the collection, and there are not any outliers (or the outliers are symmetric). 
+*   Also, inferential statistics are largely built upon measurements of the mean, so it is the statistic which is used most often.
+    
+    
+#### [Mode is Preferable When Using Categorical Data](#central-tendency)
+    
+*   In a collection with categorical data that is (generally) `not ordinal` in nature, the mode is the best measure of center, though the use of the term "center" may be taking a bit of liberty.
+
+*   The mode can also be a useful descriptive statistic when there isn't one single central concentration of values. 
+    
+> A common example of this would be the weights of household pets. If one were to take a sample of housepet weights, there would likely be a concentration of cats, each weighing between eight and twelve pounds, and a concentration of dogs weighing between twenty and thirty five pounds. The mean or median may tell us that a typical household pet weighs fifteen pounds, but that description doesn't accurately describe the typical weight of either cats or dogs. A distribution such as this is often referred to as bi-modal.    
+ 
+<div align="center">    
+    
+|Type of Variable|Best Measure of Central Tendency|
+|:-:|:-:|
+|Nominal|Mode|
+|Ordinal|Median|
+|Interval/Ratio (not skewed)|Mean|
+|Interval/Ratio (skewed)|Median|
+    
+</div> 
+    
+`Skewness` refers to a distortion or asymmetry that deviates from the symmetrical bell curve, or normal distribution, in a set of data. If the curve is shifted to the left or to the right, it is said to be `skewed`.   
     
 </details>    
 <br />
