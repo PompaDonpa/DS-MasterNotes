@@ -221,7 +221,7 @@ def gnome_sort(lst):
   return count, result
 ```
 
-## Magic Methods
+<a id="magic"><h3>Magic Methods</h3></a>
 
 <details><summary>Summary</summary>
 <br />
@@ -230,17 +230,17 @@ Magic methods in Python are the special methods which add "magic" to a class. Ma
     
 **Example:**
     
-When two numbers are added together using the + operator, internally, the `**__add__()**` method will be invoked to complete the addition, and return the sum.
+When two numbers are added together using the + operator, internally, the `__add__()` method will be invoked to complete the addition, and return the sum.
     
     
-Magic methods allow user-written classes to participate in Python's built-in functionality. For example, during object creation, Python looks for the magic method called `**__init__()**`; if `**__init__()**` exists, Python invokes the method to initialize the object. Likewise, when computing the length of an object using the len() function, Python looks for the magic method called `**__len__()**`; if `**__len__()**` exists, Python executes the method to determine the object's length.
+Magic methods allow user-written classes to participate in Python's built-in functionality. For example, during object creation, Python looks for the magic method called `__init__()`; if `__init__()` exists, Python invokes the method to initialize the object. Likewise, when computing the length of an object using the len() function, Python looks for the magic method called `__len__()`; if `__len__()` exists, Python executes the method to determine the object's length.
 
-So, just as the list and dictionary types provide an implementation of the **__len__()** magic method to allow us to call len() on them, a `**__len__()**` method can be defined in any class. Once this is done, Python will know what to do when it is passed an instance of a class to the len() function. The implementation of a `**__len__()**` method is entirely up to the user.
+So, just as the list and dictionary types provide an implementation of the **__len__()** magic method to allow us to call len() on them, a `__len__()` method can be defined in any class. Once this is done, Python will know what to do when it is passed an instance of a class to the len() function. The implementation of a `__len__()` method is entirely up to the user.
     
     
 ### Defining a Magic Method
 
-Defining a magic method is the same as defining any other method in a class. In fact, by defining an `**__init__()**` method for a class in previous lessons, this should be somewhat familiar territory. Again, like any other function or method, start with def, provide the name of the magic method (surrounded by double underscores), list the required parameters in parentheses (don't forget self), and end the line with a colon. In _Code Snippet_, see an example implementation of `**__len__()**` method in the GalvanizeCourse class that has been used throughout the materials.
+Defining a magic method is the same as defining any other method in a class. In fact, by defining an `__init__()` method for a class in previous lessons, this should be somewhat familiar territory. Again, like any other function or method, start with def, provide the name of the magic method (surrounded by double underscores), list the required parameters in parentheses (don't forget self), and end the line with a colon. In _Code Snippet_, see an example implementation of `__len__()` method in the GalvanizeCourse class that has been used throughout the materials.
     
     
 _Code Snippet_
@@ -302,9 +302,9 @@ Check #1: 0
 Check #2: 2  
 ```
     
-Notice that the **len()** function can now interact with instances of `**GalvanizeCourse**`. As a bit of a motivating question, think about how a real-world implementation of this might look. Perhaps, in a more robust version of this class, there would be a roster attribute which contain a list of **Student** instances, where **Student** is another class in its own right, with attributes and methods. Then perhaps `**__len__()**` would return the number of student instances in the roster.
+Notice that the **len()** function can now interact with instances of `GalvanizeCourse`. As a bit of a motivating question, think about how a real-world implementation of this might look. Perhaps, in a more robust version of this class, there would be a roster attribute which contain a list of **Student** instances, where **Student** is another class in its own right, with attributes and methods. Then perhaps `__len__()` would return the number of student instances in the roster.
 
-Just as one might expect, **len()** now gives the number of questions asked in the course. For reference, in the [notebook](https://colab.research.google.com/drive/1DIgJXznKVNPPBaJsFLZUMSy76bj6XAO4?usp=sharing)  with code examples, try commenting out the definition of `**__len__()**` and observe the results.
+Just as one might expect, **len()** now gives the number of questions asked in the course. For reference, in the [notebook](https://colab.research.google.com/drive/1DIgJXznKVNPPBaJsFLZUMSy76bj6XAO4?usp=sharing)  with code examples, try commenting out the definition of `__len__()` and observe the results.
     
     
 ### Other Magic Methods
@@ -443,8 +443,10 @@ A good deal of the seemingly simple functionality that is possible using Python 
 </details>    
     
 </details>
+
+<br />
     
-<h4 id="magic-challenge">Magic Methods Challenge</h4>
+<a id="magic-challenge"><h3>Magic Methods Challenge</h3></a>
     
 Fill in the following methods in the class according to their docstrings. Do not change the name of the class.
     
