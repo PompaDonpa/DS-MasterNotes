@@ -167,8 +167,10 @@ def mode(lst):
 ```
 <br />
 
-### <a id="central-tendency"><details><summary>Central Tendency</summary></a>
+### <a id="central-tendency">Central Tendency</a>
 
+<details><summary><h3>‣</h3></summary>
+    
 +   A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. 
 +   As such, measures of central tendency are sometimes called measures of central location. 
 +   They are also classed as summary statistics.
@@ -181,7 +183,7 @@ def mode(lst):
 
 > If a collection has extreme outliers, the mean may describe the distribution "center" inaccurately. A classic example of this is when looking at household incomes. Households with far greater incomes skew the mean to the point where it no longer accurately describes the dataset.
     
-_Example #1_
+_Example_
     
 Consider the incomes of the following ten households. By calculating both the mean and median, it is possible to make a determination as to which of these two statistics describes the incomes most accurately.
 
