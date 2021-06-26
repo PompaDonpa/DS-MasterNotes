@@ -970,10 +970,12 @@ If we consider $n$ to be the base of a counting system, then we can determine al
 >   |012 | 021 | 102 | 120 | 201 | 210| 
 >   |----|-----|-----|-----|-----|-----|
     
+-   &emsp;
     -   ex: $k = 2$
 >   |12 | 21 | 02 | 20 | 01 | 10| 
 >   |---|----|----|----|----|----|
 
+-   &emsp;    
     -   ex: $k = 1$
 >   |2|1|0|
 >   |-|-|-|
