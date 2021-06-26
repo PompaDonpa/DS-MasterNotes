@@ -278,3 +278,93 @@ def median(lst):
         return mean([lst_sorted[mid-1], lst_sorted[mid]])
  ```
 
+
+
+<br />
+
+<hr />
+
+
+<a id="mode"><h1>Mode</h1></a>
+
+<details><summary>Summary</summary>
+<br />
+  
+The `mode` of a numerical collection is a different approach than mean or median. Instead of finding the center of a collection, the mode seeks to find the item with the greatest frequency. In other words, the mode describes the value that occurs most often. Again, there are situations in which the mode may do a better job of describing a particular collection than a mean or median could based on the characteristics of the distribution.
+  
+
+It is worth noting that mode can be used for collections that are not numerical. The mode can determine frequency for nominal (categorical or named) data as well. The mean cannot be used to describe categorical data, and the median can only be used to describe categorical data if that data is ordinal in nature. Ordinal refers to data that has an inherent order . . . such as $ \{ 1, 2, 3 \} $  or $\{ low, medium, high\ } $.  
+  
+#### Example 1:
+    
+Find the mode of a dataset $A$ where
+    
+$ A= [\quad 1,1,2,3,3,3,3,3,3,3,3,3,4,4,4,4,5,5,5,6 \quad]$  
+
+<br />
+  
+**Step 1 :** Make a frequency table of each term in the collection as follows:
+  
+<div align="center">
+
+|Value|Frequency|
+|:-:|:-:|  
+|1|2 instances|
+|2|2 instances|
+|3|9 instances|
+|4|4 instances|
+|5|3 instances|
+|6|1 instance|  
+
+</div>
+
+We can see that the item with the most instances is the number 3, with a count of 9 instances.
+  
+**Solution** 
+  
+$ mode(A) = 3 $  
+
+<br />
+  
+#### Example 2:
+    
+Sometimes, a dataset may have more than one mode, find the mode of the dataset $B$
+    
+$ B= [\quad 1,1,2,2,3,3,3,3,4,4,4,5,5,5,5,6 \quad]$  
+
+The numbers 3 and 5 both occur four times in this collection so this collection has two modes.
+  
+**Solution**  
+  
+$ mode(B) = [3,5]$
+
+<br />  
+  
+**Notations:**
+
+Similar to median, there is no consensus on the notations used to describe mode. Here are some common notations:  
+  
+<div align="center">
+ 
+|||
+|:-:|:-:|
+|$ mode(A) $|$A$ is the collection on which to take the mode|
+|$ Mo$ |Also denotes the mode|  
+</details>
+  
+```python
+def mode(lst):
+    dict_counter = {}
+    for item in lst:
+        if item in dict_counter.keys():
+            dict_counter[item] += 1
+        else:
+            dict_counter[item] = 1
+    max_freq = max(list(dict_counter.values()))
+    modes = [item for item, freq in dict_counter.items() if freq == max_freq]
+    
+    if len(modes) == len(lst):
+        return None
+    else:
+        return modes  
+```  
