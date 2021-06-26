@@ -233,23 +233,24 @@ $$
 
 
 <details>    
-The five number summary gives a more in-depth description of a numerical collection of values. In addition to identifying a measure of center `(median)`, it gives us more insight into the way the values are distributed. The five number summary consists of the following values:
+The five number summary gives a more in-depth description of a numerical collection of values. In addition to identifying a measure of center `median`, it gives us more insight into the way the values are distributed. The five number summary consists of the following values:
 
 _Five Number Summary_
     
 The five-number summary is a set of descriptive statistics that provides information about a dataset. It consists of the five most important sample percentiles
 
-The `minimum`
-The lower (first) quartile: $Q_1$
-The `median`
-The upper (third) quartile $Q_3$
-The `maximum`
+-   The `minimum`
+-   The lower (first) quartile: $Q_1$
+-   The `median`
+-   The upper (third) quartile $Q_3$
+-   The `maximum`
 
 > The values are often expressed in a tuple, as follows
   
 $ (\quad min,\quad Q_1,\quad median,\quad Q_3,\quad max\quad)$  
     
 </details>    
+<br />
 
 ```python
 def five_number_summary(lst):
