@@ -1,9 +1,9 @@
 # Data Science & Python - Code Snippets
 
-* ##  [Tuples](#tuples)
-* ##  [Mean](#mean)
-* ##  [Median](#median)
-* ##  [Mode](#mode)
+* ###  [Tuples](#tuples)
+* ###  [Mean](#mean)
+* ###  [Median](#median)
+* ###  [Mode](#mode)
 
 <br />
 
@@ -148,12 +148,12 @@ def mean(lst, trim=0):
 
 
 
-# <a id="mean"><h3>Mean</h3></a>
+# <a id="median"><h3>Median</h3></a>
 
 <details><summary>Summary</summary>
 <br />
 
-Similar to `mean`, the median is another measure of central tendency. The median can be considered the "middle" value of some sorted numerical collection. Half of the collection is equal to or lesser than the median, and half of the collection is equal to or greater than the median. In circumstances where a collection has extreme outliers (specifically datasets which contain outliers which are not symmetrical) the median can be a more robust, or superior measure to the mean. More comparisons between the mean and median are made in the next lesson.
+Similar to `mean`, the `median` is another measure of central tendency. The median can be considered the "middle" value of some sorted numerical collection. Half of the collection is equal to or lesser than the median, and half of the collection is equal to or greater than the median. In circumstances where a collection has extreme outliers (specifically datasets which contain outliers which are not symmetrical) the median can be a more robust, or superior measure to the mean. More comparisons between the mean and median are made in the next lesson.
     
 > Denoting or relating to a value or quantity lying at the midpoint of a frequency distribution of observed values or quantities, such that there is an equal probability of falling above or below it.
     
@@ -182,18 +182,19 @@ $ B = [\quad 10,10,12,13,15,16,17,19,20,20,21 \quad]$
     
 _Step 1 :_ Find the length of the dataset
     
-    - $ N = length(B) = 11 $
+$ N = length(B) = 11 $
     
 _Step 2 :_ Find the index of the center value
     
-    - $ \frac{N+1}{2} = \frac{12}{2} = 6 $   
+$ \frac{N+1}{2} = \frac{12}{2} = 6 $   
 
 _Step 3 :_ Find the value at the index found in step 2
     
-    -   The median is located at the 6th index of the sorted list, which is 16. 
-        Double check by making sure that there are an equal number of items on either side of the median.
+-   The median is located at the 6th index of the sorted list, which is 16. 
+    Double check by making sure that there are an equal number of items on either side of the median.
     
 _Solution_
 
-$ med(B) = \hat~ x_B = 16  $    
+$ med(B) = \~ x_B = 16  $ 
+  
 </details>
