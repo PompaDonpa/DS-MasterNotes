@@ -242,7 +242,7 @@ def gnome_sort(lst):
   return count, result
 ```
 
-<a id="magic"><h3>Magic Methods</h3></a>
+<a id="magic"><h2>Magic Methods</h2></a>
 
 <details><summary>Summary</summary>
 <br />
