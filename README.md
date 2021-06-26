@@ -1,11 +1,11 @@
 <a id="top"><h1>Data Science - MasterNotes</h1></a>
 
-## *   [Python](#python)
+* ##   [Python](#python)
     -   [Comprehensions](#comprehensions)
     -   [Functions](#functions)
         -   [Factorial](#factorial)
         -   [Transpose a Matrix](#transpose)
-*   [Statistics](#statistics)
+* ##   [Statistics](#statistics)
     -   [Mean](#mean)
     -   [Median](#median)
     -   [Variance](#variance)
@@ -24,28 +24,24 @@
         -   [Geometric PMF](#geometric-pmf)
         -   [Poisson CDF](#poisson-cdf)
     -   [Binomial CDF](#binomial-cdf)
-*   [Probability](#probability)
+* ##   [Probability](#probability)
     -   [Definition of Set](#def-of-set)
     -   [Set Union](#set-union)
     -   [Set Union for more than 2 events](#set-union2)
     -   [Set Intersection](#set-inter)
     -   [Set Difference](#set-diff)
     -   [Set Complement](#set-complement)
-    -   [Axioms of Probability](#axioms-of-prob)      
-*   [Machine Learning Workflow](#machine-learning)
-    -   [Cross validation](#cross-validation)
-    -   [K - Fold Cross Validation](#k-cross)
-*   [Relevant Links](#relevant-links)
-*   [Markdown](#markdown)
-*   [Bash Scripter](#bash-scripter)
-*   [Bootstrap](#bootstrap)
-*   [Sorting Algorithms](#sorting-algo)
-    -   [Bubble Sort](#bubble-sort)
-*   [Derivations](#derivations)
-*   [MathJax](#mathjax)
-        
- 
+    -   [Axioms of Probability](#axioms-of-prob)
 
+| | | | | | |  | |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|[Machine Learning Workflow](#machine-learning)|[Sorting Algorithms](#sorting-algo)|[Derivations](#derivations)|[Relevant Links](#relevant-links)|[Markdown](#markdown)|[Bash Scripter](#bash-scripter)|[Bootstrap](#bootstrap)|[MathJax](#mathjax)|
+|`Cross validation`&ensp;[Here](#cross-validation)|`Bubble Sort`&ensp;[Here](#bubble-sort)|| | | | | |
+|`K - Fold Cross`&ensp;[Here](#k-cross)||| | | | | |
+
+<hr />        
+
+<br />
   
 
 # <a id="python" >Python</a>
