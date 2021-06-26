@@ -179,7 +179,7 @@ $ median(A) = 5 $
 When a collection has an odd number of items, determining the median is as simple as sorting the data and identifying the center value. In mathematical terms, in a sorted list of length $\mathit N $, the **index** of the median value is $\frac{N+1}{2} $.
 <br />
   
-### Example 1:
+### Example 2:
     
 Consider this example with 11 items: Find the median of the dataset $ B $.
     
@@ -210,5 +210,60 @@ _Solution_
 <br />
   
 $ med(B) = \tilde x_B = 16  $ 
+
+<br />
   
+`Median from an even-length collection`
+  
+When dealing with collections of an even length there is no term that lies directly in the middle of the collection. In other words, the median of an even-length collection is the `average of the two middle-most values`. Simply find the length of the collection, $ N $, and then take the average of the values at the $ \frac{N}{2} $ and $ \frac{N+1}{2} $indices.
+
+### Example 3:
+    
+Find the median of  $ B $ where
+    
+$ C= [\quad 120, 124, 125, 125, 135, 150, 160, 170 \quad]$
+
+<br />
+  
+_Step 1 :_ Determine whether there are an even or odd number of items
+    
+$ N = length(C) = 8 $
+
+<br />    
+  
+_Step 2 :_ Find the indices of the two middle-most values
+    
+$ \frac{N}{2} = 4 \\ \frac{N+1}{2} = 5 $   
+
+<br />
+  
+_Step 3 :_ Find the mean of the $ 4th $ and $ 5th $ terms of $ C $
+    
+$ med(C) = \tilde x_C = \frac{125+135}{2} = 130 $
+
+<br />
+  
+_Solution_
+<br />
+  
+Here, the `n'th` (4th) term is 125, and the `(n+1)'th` (5th) term is 135. The mean of these two values is `130`, therefore the median of the collection is `130`. Similar to the previous examples, there is an equal number of items above and below the median (in this case, there are **4** items on each side).
+
+<br />
+
+_Notations:_
+  
+There is no absolute consensus on the notation for median in statistics, but here are some common notations:  
+  
+<div align="center" > 
+    
+|||
+|:-:|:---:|
+|$ med(A) $| Where $A$ is the collection on which to take the median |
+|$ \tilde x $| Lower-case x with a tilde over the top of it is often used to denote the median |
+|$ \bar X $| Capitalized x-bar is a common notation for sample mean, where $ X $ is a random variable|
+ 
+</div>  
+    
 </details>
+
+
