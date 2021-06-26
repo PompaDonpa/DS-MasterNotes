@@ -968,7 +968,7 @@ If we consider $n$ to be the base of a counting system, then we can determine al
 3.  Consider $k$ items
     -   ex: $k = 3$
 >   |012 | 021 | 102 | 120 | 201 | 210| 
-|----|-----|-----|-----|-----|-----|
+>   |----|-----|-----|-----|-----|-----|
     
 </details>    
 <br />
