@@ -190,8 +190,11 @@ _Example #1_
 $$
 A = [\quad\$30\,000,\quad\$35\,000,\quad\$41\,000,\quad\$45\,000,\quad\$50\,000,\quad\$57\,000,\quad\$57\,500,\quad\$59\,000,\quad\$60\,000,\quad\$457\,000\quad]
 $$
-
-
+$$
+mean = \mu = \$89,000 \qquad median = \tilde x = \$53,500
+$$
+> _Solution_
+The mean of the household incomes is **$89,150** and the median is **$53,500**. Here the median does a better job of describing a typical household income from the collection. The mean is greatly skewed by a single income that is far greater than the others. The mean implies that a typical household would have over **$89,000** of income, despite there being only one household with an income greater than **$60,000**.
     
 </details>    
 <br />
