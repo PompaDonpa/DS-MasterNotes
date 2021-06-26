@@ -16,6 +16,7 @@
     -   [Outliers](#outliers)
     -   [Remove Outliers](#remove-outliers)
     -   [Standard Deviation](#standard-deviation)
+* ##    [Probability](#probability)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
     -   [Bernoulli](#bernoulli)
@@ -26,7 +27,7 @@
         -   [Geometric PMF](#geometric-pmf)
         -   [Poisson CDF](#poisson-cdf)
     -   [Binomial CDF](#binomial-cdf)
-* ##   [Probability](#probability)
+
     -   [Definition of Set](#def-of-set)
     -   [Set Union](#set-union)
     -   [Set Union for more than 2 events](#set-union2)
