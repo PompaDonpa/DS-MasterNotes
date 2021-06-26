@@ -631,7 +631,7 @@ def complement(sample_space, set1):
 
 ## <a id="axioms-of-prob"><h1>Axioms of Probability</h1></a>
 
-### Equating Set Algebra Laws with Boolean Logic
+## Equating Set Algebra Laws with Boolean Logic
 
 * Consider the concept of `True` as being a logical descriptor for a set $A$ containing $n$ elements.
 * In this sense, all the above laws will apply to both Sets and Boolean operations
@@ -648,7 +648,7 @@ def complement(sample_space, set1):
 
 </div>
     
-<details><summary>Commutative</summary>
+## Commutative
 <br />
 
 * A ∪ B = B ∪ A
@@ -674,10 +674,10 @@ print( (a or b) == (b or a) ) # --> True
 print( (a and b) == (b and a) ) # --> True
 ```    
     
-</details>
+
 <br />
 
-<details><summary>Associative</summary>
+## Associative
 <br />
 
 * (A ∪ B) ∪ C = A ∪ (B ∪ C) = A ∪ B ∪ C
@@ -705,12 +705,11 @@ print( ((a or b) or c) == (a or (b or c)) ) # --> True
 print( ((a and b) and c) == (a and (b and c)) ) # --> True
 ```
     
-</details>
 
 <br />
 
 
-<details><summary>Distributive</summary>
+## Distributive
 <br />
 
 * A ∪ (BC) = (A ∪ B)(A ∪ C) 
@@ -739,12 +738,11 @@ print( (a or (b and c)) == ((a or b) and (a or c)) ) # --> True
 print( (a and (b or c)) == ((a and b) or (a and c)) ) # --> True   
 ```
     
-</details>  
 
 <br />
 
 
-<details><summary>Idempotent Laws</summary>
+## Idempotent Laws
 
 <br />
     
@@ -771,12 +769,10 @@ a = True
 print( (a or a) == a ) # --> True
 print( (a and a) == a ) # --> True
 ```   
-    
-</details>
 
 <br />
 
-<details><summary>Domination Laws</summary>
+## Domination Laws
 
 <br />
     
@@ -792,7 +788,7 @@ print( (a and a) == a ) # --> True
 <br />
 
 
-<details><summary>Absorption Laws</summary>
+## Absorption Laws
 
 <br />    
     
@@ -820,7 +816,6 @@ print( (a or (a and b)) == a) # --> True
 print( (a and (a or b)) == a) # --> True
 ```
     
-</details>
 
 <br />
 
