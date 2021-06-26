@@ -456,30 +456,20 @@ def variance(lst, sample=True):
 
 -   A standard deviation can be informally interpreted as: "a typical item from this collection can be expected to have the value of the mean plus or minus the standard deviation." 
 -   This is formally defined by the empirical rule, or the 68/95/99 rule; we won't go into great detail about this rule now, but it will be covered later in the statistics block.
+    
+<br />
   
 ***Notations :***
     
-### $\sigma$ : lowercase sigma is used for the standard deviation of a population
-### $s$ : lowercase  is typically used to representation the standard deviation of a sample
-### $sd$ : the combination of lowercase $sd$ is also commonly used for both standard deviations
+$\sigma \qquad :$&emsp;lowercase sigma is used for the standard deviation of a population
+$s \qquad :$&emsp;lowercase $s$ is typically used to representation the standard deviation of a sample
+$sd \qquad :$&emsp;the combination of lowercase $sd$ is also commonly used for both standard deviations
    
     
-***Definitions :***
-    
-* **`Population Standard Deviation`**:
-
-$$
-\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2}
-$$
-
-* **`Sample Standard Deviation`**:
-
-$$
-s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \overline x)^2}
-$$
-    
 <br />
+    
 </details>
+
 <br />
 
 * **`Population Standard Deviation`**:
