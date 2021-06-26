@@ -925,7 +925,9 @@ $$
 \sum_{x=1}^{25} a_x
 $$
 
+* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
+* [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
 
 <br />
@@ -951,9 +953,31 @@ git push
 
 # <a id="relevant-links">Relevant Links</a>
 
-* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
+* [Kaggle](https://www.kaggle.com/learn)
+* [Awesome Python](https://github.com/os/awesome-python)
+* [Awesome Machine Learning](https://github.com/josephmisiti/awesome-machine-learning)
+* [Presto - Distributed SQL Query Engine for Big Data](https://prestodb.io/) 
 
-* [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
+* [JB Statistics](https://www.jbstatistics.com/)
+* [Introduction to Statistical Learning (ISLR)](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6009dd9fa7bc363aa822d2c7/1611259312432/ISLR+Seventh+Printing.pdf)
+* [Elements of Statistical Learning (ESL)](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
+* [Machine Learning with Python - freeCodeCamp](https://www.freecodecamp.org/learn/machine-learning-with-python/)
+* [100 Days of Machine Learning](https://github.com/CodesOfRa/100-Days-Of-ML-Code)
+* [Learn Machine learning in 3Mo](https://github.com/CodesOfRa/Learn_Machine_Learning_in_3_Months)
+
+
+* [Neural Network](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.74045&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) 
+* [Visualizing `scipy.stats` distributions](https://stackoverflow.com/questions/37559470/what-do-all-the-distributions-available-in-scipy-stats-look-like)
+* [Tutorial on Deep Learning for Vision](https://sites.google.com/site/deeplearningcvpr2014/)
+
+
+* [Awesome Public Dataset](https://github.com/awesomedata/awesome-public-datasets)
+* [Data Science & Machine Learning in Production](https://github.com/eugeneyan/applied-ml) 
+
+* [50 Cognitive Biases in the Modern World](https://www.visualcapitalist.com/50-cognitive-biases-in-the-modern-world/)
+* [PHD Research by Chandan Singh](https://csinva.io/)
+
 
 
 
