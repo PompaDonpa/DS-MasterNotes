@@ -78,7 +78,6 @@ matrix = [[2, 1, 5],
           [1, 7, 5]]
 ```
 
-<div align="center">
     
 $$
     \begin{matrix}
@@ -87,7 +86,8 @@ $$
     1 & z & z^2 \\
     \end{matrix}
 $$
-    
+
+<div align="center">    
 </div>
 
 |-|-|-|
