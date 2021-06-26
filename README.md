@@ -922,6 +922,7 @@ print( (not (a and b)) == (not a or not b) ) # --> True
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [LateX Basic Code](http://www.malinc.se/math/latex/basiccodeen.php)
 
+<div align="center">
 
 $$\sum_{n=1}^\infty \frac{1}{n^2} \to
   \textstyle \sum_{n=1}^\infty \frac{1}{n^2} \to
@@ -930,11 +931,9 @@ $$\sum_{n=1}^\infty \frac{1}{n^2} \to
 $\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$
 versus $\lim_{t \to 0} \int_t^1 f(t)\, dt$.
 
-$f(n) =
-\begin{cases}
-\frac{n}{2},  & \text{if $n$ is even} \\[2ex]
-3n+1, & \text{if $n$ is odd}
-\end{cases}$
+$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$
+
+</div>
 
 <br />
 <hr />
