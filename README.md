@@ -267,4 +267,14 @@ There is no absolute consensus on the notation for median in statistics, but her
     
 </details>
 
+```python
+def median(lst):
+    lst_sorted = sorted(lst)
+    mid = int(len(lst) / 2)
+    # odd
+    if len(lst) % 2:
+        return lst_sorted[mid]
+    else:
+        return mean([lst_sorted[mid-1], lst_sorted[mid]])
+ ```
 
