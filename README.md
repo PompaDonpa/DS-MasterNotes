@@ -701,9 +701,10 @@ c = True
 print( ((a or b) or c) == (a or (b or c)) ) # --> True
 print( ((a and b) and c) == (a and (b and c)) ) # --> True
     
-    
 </details>
+
 <br />
+
 
 <details><summary>Distributive</summary>
 <br />
@@ -737,7 +738,9 @@ print( (a and (b or c)) == ((a and b) or (a and c)) ) # --> True
 
 <br />
 
+
 <details><summary>Idempotent Laws</summary>
+
 <br />
     
 * _when redundant operations achieve the same result_
@@ -764,10 +767,12 @@ print( (a or a) == a ) # --> True
 print( (a and a) == a ) # --> True
 ```   
     
-</details>    
+</details>
+
 <br />
 
 <details><summary>Domination Laws</summary>
+
 <br />
     
     
@@ -778,9 +783,12 @@ print( (a and a) == a ) # --> True
 * A ∩ ∅ = ∅    
 
 </details>
+
 <br />
 
+
 <details><summary>Absorption Laws</summary>
+
 <br />    
     
 * A ∪ (AB) = A
@@ -809,7 +817,9 @@ print( (a and (a or b)) == a) # --> True
 </details>
 
 <br />
+
 <hr />
+
 
 ### Identity Property
 
