@@ -77,14 +77,14 @@ matrix = [[2, 1, 5],
           [9, 2, 8], 
           [1, 7, 5]]
 ```
+<br />
 
-    
 $$
-    \begin{matrix}
-    1 & x & x^2 \\
-    1 & y & y^2 \\
-    1 & z & z^2 \\
-    \end{matrix}
+\begin{matrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{matrix}
 $$
 
 <div align="center">    
