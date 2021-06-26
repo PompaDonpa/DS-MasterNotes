@@ -609,9 +609,16 @@ def complement(sample_space, set1):
 
 <br />
 
+<hr />
+
+
 # <a id="machine-learning">Machine Learning Workflow</a>
 
 <br />
+
+<hr />
+
+
 
 ### <a id="cross-validation">Cross Validation</a>
 
@@ -622,6 +629,10 @@ def complement(sample_space, set1):
 ### <a id="k-cross">k-fold Cross Validation</a>
 
 
+<br />
+
+<hr />
+
 
 # <a id="relevant-links">Relevant Links</a>
 
@@ -629,7 +640,11 @@ def complement(sample_space, set1):
 
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
+
 <br />
+
+<hr />
+
 
 # <a id="markdown">Markdown</a>
 
@@ -637,7 +652,11 @@ def complement(sample_space, set1):
 
 In standard Markdown, place an anchor `<a name="abcd"></a>` where you want to link to and refer to it on the same page by `[link text](#abcd)`
 
+
+
 <br />
+
+<hr />
 
 
 # <a id="bash-scripter">Bash Scripter</a>
@@ -654,11 +673,14 @@ git push
 
 <br />
 
+<hr />
 
 ### <a id="bootstrap">Bootstrap</a>
 
 <br />
-<br />
+
+<hr />
+
 
 # <a id="sorting-algo">Sorting Algorithms</a> 
 
@@ -676,13 +698,17 @@ git push
 
 <br />
 
+<hr />
+
 
 # <a id="derivations">Derivations</a>
 * [Derivation of a Perceptron]()
 
 
+
 <br />
-<br />
+
+<hr />
 
 # <a id="mathjax">MathJax</a>
 * [Plugin](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) for GitHub 
