@@ -43,7 +43,7 @@
     -   [Bubble Sort](#bubble-sort)
 *   [Derivations](#derivations)
 *   [MathJax](#mathjax)
-*         
+        
  
 
   
@@ -677,5 +677,5 @@ $$
 
 
 <div align="center">
-### [UP](#top)
+    <a href="#top"><h3>UP</h3></a>
 </div>
