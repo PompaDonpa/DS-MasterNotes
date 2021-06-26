@@ -1,4 +1,23 @@
-## Queue Time
+
+# Challenges
+
+*   [Que Time](#que)
+*   [Binary Search](#binary)
+*   [Sort by Row or Column](#sort)
+*   [Bubble Sort](#bubble)
+*   [Caesar Chiper](#caesar)
+*   [Valid Parentheses](#parentheses)
+*   [Gnome Sort](#gnome)
+*   [Magic Methods](#magic)
+
+<br />
+<!--     -   [Design Considerations](#design-c)
+    -   [Monoliths and Microservices](#monoliths-micro)
+        -   [Example](#factorial)
+        -   [Nested](#transpose) -->
+
+
+<a id="que"><h2>Queue Time</h2></a>
 
 There are a class of problems in computer programming that deal with items coming out of a queue. A great example is the self checkout line at a grocery store, where one line of shoppers wait to check out at multiple registers (for this example imagine that everyone can only checkout one item per second). Write a program thats called **`queue_time`** that will calculate the time it takes for the given **`queue`** to get processed by some number of **`processors`**. This function will have two parameters. The first one, called **`queue`**, will contain integers that representing a task with its value being how long it will take to complete. The second one, called processors, will represent the number of processors to work on the queue.
 
@@ -10,7 +29,7 @@ queue_time([3, 7, 5], 2) # this will return 8, because the first processor will 
 queue_time([10, 7], 3) # this will return 10, because the longest task in 10 units
 queue_time([10, 8, 5, 11, 9], 2) # this will return 22
 ```
-#### ***Solution***
+#### _Solution_
 
 ```python
 def queue_time(queue, processors):
@@ -22,7 +41,7 @@ def queue_time(queue, processors):
 
 ```
 
-## Binary Search
+<a id="binary"><h2>Binary Search</h2></a>
 
 When lists get incredibly long it becomes incredibly slow to search through the list. Because of this computer scientists have spent years developing techniques to make finding items in a long list quicker. Binary search is a technique used to find a specific item in a list. Learn more about binary search [here](https://en.wikipedia.org/wiki/Binary_search_algorithm)  . Essentially, binary search boils down to this:
 
@@ -46,7 +65,7 @@ bin_search([2, 4, 6, 8, 10, 12], 10)        # -> (4, 2)
 bin_search([2, 4, 6, 8, 10, 12], 12)        # -> (5, 0)
 bin_search([1, 3, 5, 7, 9, 11, 13, 15], 1)  # -> (0, 0)
 ```
-#### ***Solution***
+#### _Solution_
 ```python
 def bin_search(lst, el):
     iters = 0
@@ -72,7 +91,7 @@ def bin_search(lst, el):
 Note, the raise **`ValueError()`** is safety measure included in this function just in case you attempt to find an element that is not present; it is not necessary to include in your solution to this challenge as the test cases used by Learn always include the item to find in the input list.
 
 
-## Sort by Row or Column
+<a id="sort"><h2>Sort by Row or Column</h2></a>
 
 Write a function called sort_by_direction that takes two parameters. The first parameter called seq will be a list of lists where the number of lists is equal to the number of items in each list. The second parameter called direc will give the direction to sort each list of lists. direc will have four possible values, "L" which will sort each row in ascending order, "R" which will sort each row in descending order, "U" which sorts each column in ascending order, and "D" which sorts each column in descending order.
 
@@ -83,7 +102,8 @@ Note that a list of lists can be represented as rows and columns like so:
  [9, 2, 8],
  [1, 7, 3]]
 ```
-#### ***Solution*** 
+#### _Solution_
+
 -    ##### [video](https://www.youtube.com/watch?v=-WWOFR74PuM)
 
 ```python
@@ -109,11 +129,12 @@ def sort_by_direction(arr, direc):
     return rtn
 ```
 
-## [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
+<a id="bubble"><h2>Bubble Sort</h2></a>&emsp;[i](https://en.wikipedia.org/wiki/Bubble_sort)
 
 Bubble sort  is a classic algorithm taught in computer science (and a common interview question). Write a function called **`on_the_bubble`** that takes a **`list`** of numbers as an argument. This function should return a **`tuple`** where the first item represents the number of swaps that were performed in order to sort the **`list`**, and where the second element represents the sorted **`list`** itself.
 
-#### ***Solution***
+#### _Solution_
+
 -    [video](https://www.youtube.com/watch?v=Xj_DXB4-jLU)
 ```python 
 def on_the_bubble(lst):
@@ -131,11 +152,11 @@ def on_the_bubble(lst):
         
 ```
 
-## Caesar Chiper
+<a id="caesar"><h2>Caesar Chiper</h2></a>
 
 A Caesar Cipher is a classic encryption technique used to encrypt strings. It works by shifting some each letter some amount in the alphabet. For instance, if the shift amount is 2 and the letter is "a" the result will be "c". It also rotates around so if the shift is 2 and the letter is "y" the result will be "a". Learn more about Caesar Ciphers [here](https://en.wikipedia.org/wiki/Caesar_cipher)  . Complete the **`caesar_cipher`** function below. This function takes in two parameters `msg` and **`shift`**, which are the string to be encoded and the size of the shift respectively. This function should return the encrypted string. Note that there wont be any spaces or numbers in the string.
 
-#### ***Solution***
+#### _Solution_
 
 ```python 
 def caesar_cipher(msg, shift):
@@ -166,7 +187,7 @@ def caesar_cipher(msg, shift):
     return new_msg
 ```
 
-## Valid Parentheses
+<a id="parentheses"><h2>Valid Parentheses</h2></a>
 
 Write a function called **`valid_parentheses`** which checks to make sure every **`"("`** has a matching **`")"`**. This function should take in a string, and return a boolean. If every **`"("`** has a matching **`")"`** this function should return **`True`**, if it does not, the function should return **`False`**.
 
@@ -180,7 +201,7 @@ print( valid_parentheses("()")       ) # True
 print( valid_parentheses(")(((()))") ) # False
 ```
 
-#### ***Solution***
+#### _Solution_
 
 ```python
 def valid_parentheses(string):
@@ -195,13 +216,13 @@ def valid_parentheses(string):
     return match == 0
 ```
 
-## Gnome Sort
+<a id="gnome"><h2>Gnome Sort</h2></a>
 
 Gnome sort is a technique that expands upon the ideas of bubble sort (see last weeks weekly challenge for bubble sort). Instead of iterating through the whole list and swapping items as they come. Gnome sort finds an item that is out of place and iterates back through the list and places it where it needs to be and then continues going forward through the list. Read more about Gnome sort [here](https://en.wikipedia.org/wiki/Gnome_sort) .
 
 Write a **`gnome_sort`** function that takes in a list and returns a tuple, where the first item is the number times it looped and the second item is the sorted list.
 
-#### ***Solution***
+#### _Solution_
 
 ```python 
 def gnome_sort(lst):
@@ -302,7 +323,7 @@ Check #1: 0
 Check #2: 2  
 ```
     
-Notice that the **len()** function can now interact with instances of `GalvanizeCourse`. As a bit of a motivating question, think about how a real-world implementation of this might look. Perhaps, in a more robust version of this class, there would be a roster attribute which contain a list of **Student** instances, where **Student** is another class in its own right, with attributes and methods. Then perhaps `__len__()` would return the number of student instances in the roster.
+Notice that the **len()** function can now interact with instances of `GalvanizeCourse`. As a bit of a motivating question, think about how a real-world implementation of this might look. Perhaps, in a more robust version of this class, there would be a roster attribute which contain a list of `Student` instances, where `Student` is another class in its own right, with attributes and methods. Then perhaps `__len__()` would return the number of student instances in the roster.
 
 Just as one might expect, **len()** now gives the number of questions asked in the course. For reference, in the [notebook](https://colab.research.google.com/drive/1DIgJXznKVNPPBaJsFLZUMSy76bj6XAO4?usp=sharing)  with code examples, try commenting out the definition of `__len__()` and observe the results.
     
@@ -312,13 +333,13 @@ Just as one might expect, **len()** now gives the number of questions asked in t
 <details><summary>Summary</summary>
 <br />
     
-It turns out that there is a large assortment of magic methods that can be implemented in user-created classes. For example, take a look at what happens when using the **print()** function on the **GalvanizeCourse** class:
+It turns out that there is a large assortment of magic methods that can be implemented in user-created classes. For example, take a look at what happens when using the `print()` function on the `GalvanizeCourse` class:
     
 `<__main__.GalvanizeCourse instance at 0x10a157a28>`
 
-This isn't very informative, this states that the **__main__()** method for a **GalvanizeCourse** instance is at **0x10a157a28**, which is a memory location; while this is very useful to the Python interpretter, there's not much value or human interpretation who wanted some representation of the object displayed on the console. To get a more informative representation of the object, use the **__str__()** method. This is the magic method that Python calls when any object is cast to a string with the **str()** constructor. And, perhaps not surprisingly, Python casts objects to strings whenever the **print()** function is invoked, this is because Python only knows how to output strings to the console.
+This isn't very informative, this states that the `__main__()` method for a `GalvanizeCourse` instance is at `0x10a157a28`, which is a memory location; while this is very useful to the Python interpretter, there's not much value or human interpretation who wanted some representation of the object displayed on the console. To get a more informative representation of the object, use the `__str__()` method. This is the magic method that Python calls when any object is cast to a string with the `str()` constructor. And, perhaps not surprisingly, Python casts objects to strings whenever the `print()` function is invoked, this is because Python only knows how to output strings to the console.
 
-See an implementation of the **__str__()** method below, after this implementation **print()** can be used to display an instance of **GalvanizeCourse** which is an easily interpretted representation of the object in the console.   
+See an implementation of the `__str__()` method below, after this implementation **print()** can be used to display an instance of `GalvanizeCourse` which is an easily interpretted representation of the object in the console.   
     
 _Code Snippet_
     
@@ -370,7 +391,7 @@ Output:
 Intro Python, location: Platte
 ```
     
-Shown above when the **__str__()** method is defined, the **__str__()** method returns an informative string. Now, when an instance of **GalvanizeCourse** is printed, there is something useful.
+Shown above when the `__str__()` method is defined, the `__str__()` method returns an informative string. Now, when an instance of `GalvanizeCourse` is printed, there is something useful.
     
 
 </details>
@@ -381,12 +402,12 @@ Shown above when the **__str__()** method is defined, the **__str__()** method r
 <details><summary>Summary</summary>
 <br />
    
-If two integers, floats, strings, etc. can be tested for equality with use of the equality operator, **==** , why couldn't a user-created class do the same? As it turns out, this can be done by defining the **__eq__()** method.
+If two integers, floats, strings, etc. can be tested for equality with use of the equality operator, `==` , why couldn't a user-created class do the same? As it turns out, this can be done by defining the `__eq__()` method.
 
     
-How does a class know when it's being compared to another object to check for equality? If you take a look at the documentation for the magic _**_eq__()** method [here](https://docs.python.org/3.6/reference/datamodel.html#object.__eq__), it shows what the parameters are: `object.__eq__(self, other)`. We already know that **self** is a reference to the object that a method is called on, and **other** is a reference to an object as well, the second parameter in this case.
+How does a class know when it's being compared to another object to check for equality? If you take a look at the documentation for the magic `__eq__()` method [here](https://docs.python.org/3.6/reference/datamodel.html#object.__eq__), it shows what the parameters are: `object.__eq__(self, other)`. We already know that **self** is a reference to the object that a method is called on, and **other** is a reference to an object as well, the second parameter in this case.
     
-The way that Python evaluates an expression like `x == y` is that it calls the **__eq__()** magic method on the object on the left side the expression (i.e., `x`). As with any other method call, Python passes a reference to the object as the method's first argument **(self)**. Then, it looks on the right side of the **==** and passes a reference to the object there as the second argument to **__eq__()**, in this case `y`. So, the **other** argument that is shown above is just a reference to the second object from the right side of the equality operator. A reference to this object works the same as any other, the attributes and methods of the **other** object can be referenced using dot notation.
+The way that Python evaluates an expression like `x == y` is that it calls the `__eq__()` magic method on the object on the left side the expression (i.e., `x`). As with any other method call, Python passes a reference to the object as the method's first argument **(self)**. Then, it looks on the right side of the `==` and passes a reference to the object there as the second argument to `__eq__()`, in this case `y`. So, the **other** argument that is shown above is just a reference to the second object from the right side of the equality operator. A reference to this object works the same as any other, the attributes and methods of the **other** object can be referenced using dot notation.
 
 For example, consider two instances of **GalvanizeCourse** equal if they have the same name and location. See below for an example:
  
@@ -431,7 +452,7 @@ class GalvanizeCourse():
     
 ```
 
-Notice that we have access to information about the **other** instance through the usual dot notation. Also, since would expect the result of a **==** expression to be `True` or `False`, we've made our `__eq__()` magic method return a boolean value. In general, you should take special care to make sure to return things from your magic methods that make sense within the context!
+Notice that we have access to information about the `other` instance through the usual dot notation. Also, since would expect the result of a `==` expression to be `True` or `False`, we've made our `__eq__()` magic method return a boolean value. In general, you should take special care to make sure to return things from your magic methods that make sense within the context!
  
 <br />
     
