@@ -26,6 +26,7 @@
     -   [Calculating Probability](#calc-prob)
     -   [Permutations](#permutations)
     -   [Combinations](#combinations)
+        -   [Combinations Itertools](#combinations-itertools)
     -   [Bernoulli](#bernoulli)
     -   [Binomial PMF](#binomial-pmf)
         -   [Binomial PMF Dictionary](#binomial-pmf-dict)
@@ -1023,6 +1024,33 @@ def combinations(n, k):
     for i in range(n, n-k, -1):
         perm *= i
     return int(perm / factorial(k))
+```
+<br />
+
+
+### <a id="combinations-itertools">Combinations from itertools</a>
+
+
+```python
+def combs_from_itertools(lst, k):
+    # get a frozen version of the input
+    lst_frozen = tuple(lst)
+    n = len(lst_frozen)
+    combs = []
+    if k > n: return
+    indices = list(range(k))
+    yield tuple(lst_frozen[i] for i in indices)
+    while True:
+        for i in reversed(range(k)):
+            if indices[i] != i + n - k:
+                break
+        else:
+            return
+        indices[i] += 1
+        for j in range(i+1, k):
+            indices[j] = indices[j-1] + 1
+        yield tuple(lst_frozen[i] for i in indices)
+    
 ```
 <br />
 
