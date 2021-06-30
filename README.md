@@ -1118,7 +1118,7 @@ for k, v in d.items():
 ### `poisson_pmf()`
 * $e = 2.71828$
 * Note, both the constant `e` and the `factorial()` function are available from the `math` module.
-
+    -   `$\lambda$`:&ensp;The average number of occurances in a certain time.  
 
 $$
 P(\lambda, k \text{ events}) = \frac{e^{-\lambda}\lambda^k}{k!}
