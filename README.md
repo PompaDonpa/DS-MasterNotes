@@ -38,6 +38,8 @@
         -   [Poisson CDF](#poisson-cdf)
         -   [Poisson CDF Dictionary](#poisson-pcdf-dict)
         -   [Geometric CDF](#geometric-cdf)
+    -   [Exponential Distribution](#exponential-dis)
+    -   [Normal Distribution](#normal-dis)
     -   [Axioms of Probability](#axioms-of-prob)
 
 <div align="center">
@@ -1340,6 +1342,15 @@ c = exponential_stdev(lam=0.1))
     
     
 </details>
+
+
+<br />
+
+
+### <a id="normal-dis">Normal Distribution - Gaussian</a>
+
+
+
 
 
 <br />
