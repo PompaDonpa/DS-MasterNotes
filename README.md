@@ -1287,7 +1287,7 @@ def poisson_cdf(lmbda, k_high):
 <br />
 
 ### <a id="exponential-dis">Exponential Distribution</a>
-### `geometric_cdf()`
+
 
 ```python
 from math import e, sqrt
@@ -1309,7 +1309,7 @@ def exponential_variance(lam):
 def exponential_stdev(lam):
     return sqrt(1 / lam**2)
 ```
-
+`Expectation = exponential_mean`
 
 <br />
 
