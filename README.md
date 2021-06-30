@@ -33,8 +33,11 @@
         -   [Poisson PMF](#poisson-pmf)
         -   [Poisson PMF Dictionary](#poisson-pmf-dict)
         -   [Geometric PMF](#geometric-pmf)
-        -   [Poisson CDF](#poisson-cdf)
     -   [Binomial CDF](#binomial-cdf)
+        -   [Binomial CDF Dictionary](#binomial-cdf-dict)
+        -   [Poisson CDF](#poisson-cdf)
+        -   [Poisson CDF Dictionary](#poisson-pcdf-dict)
+        -   [Geometric CDF](#geometric-cdf)
     -   [Axioms of Probability](#axioms-of-prob)
 
 <div align="center">
@@ -1068,11 +1071,14 @@ def bernoulli(p_success=0.5):
 <br />
 
 ### <a id="binomial-pmf">Binomial PMF</a>
+
+####    `binomial_pmf(n,p,k)`
+
 * 3 parameters
 -   $n$ = number of bernoulli trials
 -   $p$ = probability of success on any given bernoulli trial
 -   $k$ = specific number of successes for which to find the probability
-####    `binomial_pmf(n,p,k)`
+
 $$
 P(X=k) = {n \choose k} p^k(1-p)^{n-k}
 $$
@@ -1081,26 +1087,6 @@ $$
 ```python
 def binomial_pmf(n, k, p=0.5):
     return combinations(n, k) * (p**k) * (1-p)**(n-k)
-```
-<br />
-
-### <a id="binomial-cdf">Binomial CDF</a>
-
-####    `binomial_cdf(n, k_high, p=0.5)`
-
-$$
-P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
-$$
-
-
-```python
-def binomial_cdf(n, k_high, p=0.5):
-    cumulative = 0.0
-
-    for k in range(0, k_high+1):
-        cumulative += binomial_pmf(n, k, p)
-
-    return cumulative
 ```
 
 
@@ -1139,9 +1125,10 @@ for k, v in d.items():
 ### <a id="poisson-pmf">Poisson PMF</a>
 
 ### `poisson_pmf()`
+
 * $e = 2.71828$
 * Note, both the constant `e` and the `factorial()` function are available from the `math` module.
-    -   `lambda`&ensp;The average number of occurances in a certain time.  
+* `lambda`&ensp;The average number of occurances in a certain time.  
 
 $$
 P(\lambda, k \text{ events}) = \frac{e^{-\lambda}\lambda^k}{k!}
@@ -1211,6 +1198,47 @@ def geometric_pmf(p, k, inclusive=True):
 ```
 <br />
 
+
+
+
+<br />
+
+### <a id="binomial-cdf">Binomial CDF</a>
+
+####    `binomial_cdf(n, k_high, p=0.5)`
+
+$$
+P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
+$$
+
+
+```python
+def binomial_cdf(n, k_high, p=0.5):
+    cumulative = 0.0
+
+    for k in range(0, k_high+1):
+        cumulative += binomial_pmf(n, k, p)
+
+    return cumulative
+```
+
+<br />
+
+
+### <a id="binomial-cdf-dict">Binomial CDF Dictionary</a>
+
+#### `binomial_cdf_dict()`
+
+
+<br />
+
+### <a id="poisson-cdf">Poisson PMF</a>
+
+### `poisson_pmf()`
+
+<br />
+
+
 ### <a id="poisson-cdf">Poisson CDF Dictionary</a>
 ### `poisson_cdf()`
 * your parameters will be 
@@ -1226,6 +1254,11 @@ def poisson_cdf(lmbda, k_high):
 
     return cdf
 ```
+
+<br />
+
+### <a id="geometric-cdf">Geometric CDF</a>
+### `geometric_cdf()`
 
 
 
