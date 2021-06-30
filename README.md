@@ -1167,7 +1167,9 @@ d = poisson_pmf_dict(10, 0, 30)
 for k, v in d.items():
     print(f'{k}: {round(v, 6)}')
 ```
+
 <br />
+
 
 ### <a id="geometric-pmf">Geometric PMF</a>
 ### `geometric_pmf()`
@@ -1229,18 +1231,32 @@ def binomial_cdf(n, k_high, p=0.5):
 
 #### `binomial_cdf_dict()`
 
+* your parameters will be 
+    * `n`
+    * `k_low`
+    * `k_high`
+    * `p`
+
+```python
+def binomial_cdf_dict(n, k_low, k_high, p=0.5):
+    d = dict()
+    for k in range(k_low, k_high+1):
+        d[k] = binomial_cdf(n, k, p)
+    return d
+    
+d = binomial_cdf_dict(n=8, k_low=0, k_high=8, p=0.25)
+
+for k, v in d.items():
+    print(f'{k}: {v}')
+```
+
 
 <br />
 
-### <a id="poisson-cdf">Poisson PMF</a>
+### <a id="poisson-cdf">Poisson CDF</a>
 
-### `poisson_pmf()`
-
-<br />
-
-
-### <a id="poisson-cdf">Poisson CDF Dictionary</a>
 ### `poisson_cdf()`
+
 * your parameters will be 
     * `lmbda`
     * `high_k`
@@ -1254,6 +1270,13 @@ def poisson_cdf(lmbda, k_high):
 
     return cdf
 ```
+
+<br />
+
+
+### <a id="poisson-cdf">Poisson CDF Dictionary</a>
+### `poisson_cdf()`
+
 
 <br />
 
