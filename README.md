@@ -1311,6 +1311,31 @@ def exponential_stdev(lam):
 ```
 `Expectation = exponential_mean`
 
+> Often time, when we are looking at variance, we want to rethink that in terms of `standard_deviation`, so we can interpret it more easily.
+> Depend on the domain you are in, It's nicer to have it in the units and not squared units.
+
+<details><summary>example</summary>
+```python
+'''
+Suppose you're on a street corner trying to hail a taxi cab. Let
+X = The amount of time (in minutes) that you have to wait.
+X ~ exponential(0.1)
+λ = 0.1 (meaning the rate of cab rrivals is 0.1 per minute)
+
+a = What's the probability that you'll have to wait more than ten minutes?
+b = What is the amount of time that you would expect to wait?
+c = What is the variance of this random variable?
+'''
+
+a = (1 - exponential_cdf(lam=0.1, x=10))
+
+b = exponential_mean(lam=0.1)
+
+c = exponential_stdev(lam=0.1))
+
+```
+</details>
+
 <br />
 
 <hr />
