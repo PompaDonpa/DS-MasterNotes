@@ -1084,6 +1084,29 @@ def binomial_pmf(n, k, p=0.5):
 ```
 <br />
 
+### <a id="binomial-cdf">Binomial CDF</a>
+
+####    `binomial_cdf(n, k_high, p=0.5)`
+
+$$
+P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
+$$
+
+
+```python
+def binomial_cdf(n, k_high, p=0.5):
+    cumulative = 0.0
+
+    for k in range(0, k_high+1):
+        cumulative += binomial_pmf(n, k, p)
+
+    return cumulative
+```
+
+
+<br />
+
+
 ### <a id="binomial-pmf-dict">Binomial PMF Dictionary</a>
 
 #### `binomial_pmf_dict()`
@@ -1118,7 +1141,7 @@ for k, v in d.items():
 ### `poisson_pmf()`
 * $e = 2.71828$
 * Note, both the constant `e` and the `factorial()` function are available from the `math` module.
-    -   `$\lambda$`:&ensp;The average number of occurances in a certain time.  
+    -   `lambda`&ensp;The average number of occurances in a certain time.  
 
 $$
 P(\lambda, k \text{ events}) = \frac{e^{-\lambda}\lambda^k}{k!}
@@ -1205,26 +1228,7 @@ def poisson_cdf(lmbda, k_high):
 ```
 
 
-<br />
 
-### <a id="binomial-cdf">Binomial CDF</a>
-
-####    `binomial_cdf(n, k_high, p=0.5)`
-
-$$
-P(X \le k) = \sum_{i=0}^k {n \choose i}p^i(1-p)^{n-i}
-$$
-
-
-```python
-def binomial_cdf(n, k_high, p=0.5):
-    cumulative = 0.0
-
-    for k in range(0, k_high+1):
-        cumulative += binomial_pmf(n, k, p)
-
-    return cumulative
-```
 
 <br />
 
